@@ -1,0 +1,30 @@
+{
+  "name": "moriston.losttype.com",
+  "version": "0.1.0",
+  "description": "The minisite for Riley Cran’s Moriston, distributed by the Lost Type Co-op.",
+  "homepage": "http://moriston.losttype.com",
+  "author": "Kenneth Ormandy <hello@kennethormandy.com> (http://kennethormandy.com)",
+  "license": "Copyright © 2014–2015 The Lost Type Co-op",
+  "private": true,
+  "repository": "git@github.com:losttype/moriston.losttype.com.git",
+  "keywords": [],
+  "dependencies": {
+    "dropcap.js": "^1.0.0",
+    "zoom.js": "fat/zoom.js"
+  },
+  "devDependencies": {
+    "harp": "0.17.0",
+    "normalize-opentype.css": "0.2.4",
+    "normalize.css": "3.0.3",
+    "onchange": "1.1.0",
+    "standard": "4.5.4",
+    "surge": "latest",
+    "terraform": "kennethormandy/terraform#ko-browserify-personal"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified…yet! Pull requests on https://github.com/losttype/moriston.losttype.com are greatly appreciated.\" && exit 1",
+    "postinstall": "cp ./node_modules/normalize.css/normalize.css ./node_modules/normalize.css/normalize.scss",
+    "build": "harp compile",
+    "start": "harp server -p 9005"
+  }
+}

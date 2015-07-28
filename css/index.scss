@@ -1,0 +1,94 @@
+@import "../node_modules/normalize.css/normalize";
+
+$riley-red: mix(red, orange, 50%);
+$blue: cornflowerblue;
+
+html {
+  font-family: "Moriston", "Helvetica Neue", "Helvetcia", Arial, sans-serif;
+}
+
+.container {
+  max-width: 50em;
+  margin: 3em auto;
+}
+
+.overlay {
+  transform: translateY(-100%);
+
+  .square {
+    background-color: $blue;
+    color: $riley-red;
+    opacity: 0.5;
+  }
+}
+
+.grid {
+  display: flex;
+}
+
+.grid__cell {
+  flex: 1;
+}
+
+// Square
+//
+// Derived from [this pen](http://codepen.io/thetallweeks/pen/tAdmL).
+//
+// No styleguide reference.
+.square {
+  padding-bottom: 25%; // This was 100% in the original, don’t know why it’s different
+  position: relative;
+
+  // Temp
+  overflow: hidden;
+  background-color: $riley-red;
+  color: white;
+}
+
+.square__content {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  // Temp
+  font-size: 28em;
+
+  &:nth-of-type(2n) {
+    font-size: 35em;
+  }
+  &:nth-of-type(3n) {
+    font-size: 20em;
+  }
+
+
+}
+
+.square__content--centered {
+  align-items: center;
+  justify-content: center;
+}
+
+
+// Temp
+.u-fontWeight--300 {
+  font-weight: 300;
+}
+
+.u-fontWeight--400 {
+  font-weight: 400;
+}
+
+.u-fontWeight--600 {
+  font-weight: 600;
+}
+
+.u-fontWeight--700 {
+  font-weight: 700;
+}
+
+.u-fontWeight--900 {
+  font-weight: 900;
+}
