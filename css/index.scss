@@ -1,33 +1,49 @@
 @import "../node_modules/normalize.css/normalize";
 
-$riley-red: mix(red, orange, 50%);
-$blue: cornflowerblue;
+$riley-red: mix(red, mix(orange, pink, 25%), 50%);
+$blue: royalblue;
+$base-font-family: "Moriston", "Helvetica Neue", "Helvetcia", Arial, sans-serif;
 
 html {
-  font-family: "Moriston", "Helvetica Neue", "Helvetcia", Arial, sans-serif;
+  font-family: $base-font-family;
+}
+
+body {
+  margin: 0;
+  @media (min-width: 30em) {
+    margin: 1em;
+  }
 }
 
 .container {
   max-width: 50em;
-  margin: 3em auto;
-}
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+  @media (min-width: 30em) {
+    padding: 0;
+    max-width: 50em;
 
-.overlay {
-  transform: translateY(-100%);
-
-  .square {
-    background-color: $blue;
-    color: $riley-red;
-    opacity: 0.5;
   }
 }
 
 .grid {
   display: flex;
+  max-width: 75rem;
+  margin: 0 auto;
 }
 
 .grid__cell {
   flex: 1;
+}
+
+.h1--temp {
+  font-weight: 500;
+  color: $riley-red;
+  font-family: $base-font-family;
+  strong {
+    font-weight: 900;
+  }
 }
 
 // Square
@@ -36,13 +52,15 @@ html {
 //
 // No styleguide reference.
 .square {
-  padding-bottom: 25%; // This was 100% in the original, don’t know why it’s different
+  padding-bottom: 20%; // This was 100% in the original, don’t know why it’s different
   position: relative;
+  user-select: none;
+  speak: none;
+  cursor: default;
 
   // Temp
   overflow: hidden;
-  background-color: $riley-red;
-  color: white;
+
 }
 
 .square__content {
@@ -53,16 +71,48 @@ html {
   bottom: 0;
   left: 0;
 
+  transition: 0.25s color ease-in-out, 1s background-color ease-in-out, 0.5s transform ease-in-out;
+
+  &:hover {
+    color: $blue;
+    background-color: $riley-red;
+    // transform: translateY(20px);
+    backface-visibility: visible;
+    &:first-child {
+      color: $riley-red;
+      background-color: $blue;
+      transform: none;
+    }
+  }
+
   // Temp
-  font-size: 28em;
+  font-size: 20em;
 
   &:nth-of-type(2n) {
-    font-size: 35em;
+    font-size: 40em;
   }
   &:nth-of-type(3n) {
-    font-size: 20em;
+    font-size: 10em;
   }
 
+  background-color: $blue;
+  color: white;
+  mix-blend-mode: multiply;
+  opacity: 0.75;
+
+  &:first-child {
+    background-color: $riley-red;
+    mix-blend-mode: none;
+    opacity: 1.0;
+  }
+
+  &:hover {
+    mix-blend-mode: none !important;
+  }
+
+  @media (min-width: 30em) {
+    font-size: 30em;
+  }
 
 }
 
