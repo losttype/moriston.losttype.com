@@ -1,20 +1,3 @@
-@import "../node_modules/normalize.css/normalize";
-
-$riley-red: mix(red, mix(orange, pink, 25%), 50%);
-$blue: royalblue;
-$base-font-family: "Moriston", "Helvetica Neue", "Helvetcia", Arial, sans-serif;
-
-html {
-  font-family: $base-font-family;
-}
-
-body {
-  margin: 0;
-  @media (min-width: 30em) {
-    margin: 1em;
-  }
-}
-
 .container {
   max-width: 50em;
   margin-left: auto;
@@ -35,15 +18,6 @@ body {
 
 .grid__cell {
   flex: 1;
-}
-
-.h1--temp {
-  font-weight: 500;
-  color: $riley-red;
-  font-family: $base-font-family;
-  strong {
-    font-weight: 900;
-  }
 }
 
 // Square
@@ -119,26 +93,4 @@ body {
 .square__content--centered {
   align-items: center;
   justify-content: center;
-}
-
-
-// Temp
-.u-fontWeight--300 {
-  font-weight: 300;
-}
-
-.u-fontWeight--400 {
-  font-weight: 400;
-}
-
-.u-fontWeight--600 {
-  font-weight: 600;
-}
-
-.u-fontWeight--700 {
-  font-weight: 700;
-}
-
-.u-fontWeight--900 {
-  font-weight: 900;
 }

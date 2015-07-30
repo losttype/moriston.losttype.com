@@ -1,0 +1,37 @@
+// Base
+//
+// Styleguide: base
+
+html {
+  font-family: $base-font-family;
+}
+
+body {
+  margin: 0;
+  @media (min-width: 30em) {
+    margin: 1em;
+  }
+}
+
+[contenteditable] {
+  opacity: 0.8;
+  transition: opacity 0.25s ease-in-out;
+  &:focus,
+  &:hover {
+    opacity: 1;
+    outline: none;
+  }
+}
+
+.h1--temp {
+  font-weight: 500;
+  color: $riley-red;
+  font-family: $base-font-family;
+  strong {
+    font-weight: 900;
+  }
+}
+
+.caps {
+  @extend abbr;
+}
