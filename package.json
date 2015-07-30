@@ -9,10 +9,16 @@
   "repository": "git@github.com:losttype/moriston.losttype.com.git",
   "keywords": [],
   "dependencies": {
+    "contenteditable": "0.3.0",
     "dropcap.js": "^1.0.0",
     "zoom.js": "fat/zoom.js"
   },
   "devDependencies": {
+    "animate.scss": "0.0.6",
+    "browserify": "11.0.1",
+    "decomponentify": "0.1.0",
+    "fitter-happier-text": "0.0.6",
+    "fontfaceobserver": "1.5.1",
     "harp": "0.17.0",
     "normalize-opentype.css": "0.2.4",
     "normalize.css": "3.0.3",
