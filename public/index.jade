@@ -60,8 +60,11 @@ html
 
       h1.h1--temp <strong>Moriston.</strong> A typeface by Riley Cran.
       
-      p New York, <abbr class="caps">NY</abbr>
-      
+      div(contenteditable)
+        .simpleTester.u-fontWeight--400
+          p <strong>Edit Me.</strong> Riley Cran is a designer based in the Pacific Northwest with a specialty in Identity, Packaging and Illustration. 
+          p Aspiring to create characterful and functional work, Riley merges historical influences with modern, contemporary solutions that are relevant in 2014. 
+          p Do you need something designed?
       div(contenteditable)
         .simpleTester.u-fontWeight--300.js-fitterHappier San Francisco
       div(contenteditable)
@@ -72,3 +75,17 @@ html
         .simpleTester.u-fontWeight--700.js-fitterHappier Chicago
       div(contenteditable)
         .simpleTester.u-fontWeight--900.js-fitterHappier Vancouver
+      div(contenteditable)
+        .simpleTester.u-fontWeight--300.js-fitterHappier 1452
+
+
+      //- .js-typeTester Cordova
+      //- 
+      script(src="/js/index.js")
+      //- script.
+      //-   var typeTesterOpts = {
+      //-     families: ['Moriston:n3,n4,n5,n7,n9'],
+      //-     pathToFonts: '/fonts/',
+      //-     minFontSize: 10
+      //-   }
+      //- script(src="/js/vendor/type-tester.js" async defer onload="TypeTester('.js-typeTester', typeTesterOpts)")
