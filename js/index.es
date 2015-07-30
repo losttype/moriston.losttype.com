@@ -31,7 +31,7 @@ var fitterHappierAgain = function(el, options) {
 var editableEvents = function(el) {
   var editable = new Editable(el)
   editable.enable()
-  editable.on('state', function (e) {
+  editable.on('change', function (e) {
     console.log('e', e)
     e.preventDefault()
     fitterHappierAgain(el, { paddingY: fitterHappierPaddingY })
