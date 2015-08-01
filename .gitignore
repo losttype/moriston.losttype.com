@@ -13,6 +13,10 @@ node_modules
 components
 bower_components
 fonts
+*.woff
+*.woff2
+*.ttf
+*.otf
 
 # Compile directories
 build/
