@@ -1,10 +1,14 @@
 {
   "name": "moriston.losttype.com",
   "version": "0.1.0",
-  "description": "The minisite for Riley Cran’s Moriston, distributed by the Lost Type Co-op.",
+  "description": "The minisite for Riley Cran’s Moriston, from your friends at Lost Type.",
   "homepage": "http://moriston.losttype.com",
   "author": "Kenneth Ormandy <hello@kennethormandy.com> (http://kennethormandy.com)",
-  "license": "Copyright © 2014–2015 The Lost Type Co-op",
+  "contributors": [
+    "Kenneth Ormandy <hello@kennethormandy.com> (http://kennethormandy.com)",
+    "Riley Cran <riley@rileycran.com (http://rileycran.com)"
+  ],
+  "license": "Copyright © 2015 Kenneth Ormandy & The Lost Type Co-op",
   "private": true,
   "repository": "git@github.com:losttype/moriston.losttype.com.git",
   "keywords": [],
