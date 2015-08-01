@@ -1,11 +1,11 @@
 var fitterHappierText = require('fitter-happier-text')
-var fontfaceobserver = require('fontfaceobserver')
+require('fontfaceobserver')
 var Editable = require('contenteditable')
 
 var contentEditable = document.querySelectorAll('[contenteditable]')
 var fitterHappierPaddingY = 3
 
-var fitterHappier = function(nodes) {
+var fitterHappier = function (nodes) {
   console.log(nodes)
   fitterHappierText(nodes, { paddingY: fitterHappierPaddingY, baseline: 14 })
 }
@@ -16,19 +16,19 @@ var fitterHappier = function(nodes) {
 // for this specific part from fitter-happier-text?
 // ie. update the width and height attrs, but that’s it?
 // From: https://github.com/jxnblk/fitter-happier-text/blob/master/index.js#L44-L45
-var fitterHappierAgain = function(el, options) {
-  var options = options || {};
-  var paddingY = options.paddingY || 0;
+var fitterHappierAgain = function (el, options) {
+  options = options || {}
+  var paddingY = options.paddingY || 0
   var svg = el.firstChild
   var text = svg.firstChild
   console.log('svg', svg)
   var width = text.offsetWidth || text.getComputedTextLength()
   var height = text.offsetHeight || 24
 
-  svg.setAttribute('viewBox', '0 0 ' + width + ' ' + (height + paddingY));
+  svg.setAttribute('viewBox', '0 0 ' + width + ' ' + (height + paddingY))
 }
 
-var editableEvents = function(el) {
+var editableEvents = function (el) {
   var editable = new Editable(el)
   editable.enable()
   editable.on('change', function (e) {
@@ -38,7 +38,7 @@ var editableEvents = function(el) {
   })
 }
 
-var editableInit = function() {
+var editableInit = function () {
   for (var index in contentEditable) {
     if (contentEditable.hasOwnProperty(index)) {
       editableEvents(contentEditable[index])
@@ -55,7 +55,7 @@ var observerRegular = new FontFaceObserver('Moriston', {
 observerRegular
   .check()
   .then(function () {
-    console.log('Moriston regular is available');
+    console.log('Moriston regular is available')
 
     // Load remainder of family
     observer
@@ -65,9 +65,9 @@ observerRegular
         fitterHappier(nodes)
         editableInit()
       }, function () {
-        console.log('Remainder of font is not available');
+        console.log('Remainder of font is not available')
       })
 
   }, function () {
-    console.log('Font is not available');
+    console.log('Font is not available')
   })
