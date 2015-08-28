@@ -1,6 +1,19 @@
 // Variables
 
-$riley-red: mix(red, mix(orange, pink, 25%), 50%);
-$blue: royalblue;
 $base-font-family: "Moriston", "Helvetica Neue", "Helvetcia", Arial, sans-serif;
-$color-primary: $riley-red;
+
+$riley: #FE5F2B;
+$riley-light: #FBEDDF;
+$riley-dark: #D14E21;
+
+$red: #FB454B;
+$red-dark: darken($red, 10%);
+$red-light: lighten($red, 10%);
+
+$blue: #0096CA;
+$blue-dark: darken($blue, 10%);
+$blue-light: lighten($blue, 10%);
+
+$purple: #654352;
+$purple-dark: darken($purple, 10%);
+$purple-light: lighten($purple, 10%);

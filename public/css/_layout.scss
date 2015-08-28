@@ -48,11 +48,11 @@
 
   &:hover {
     color: $blue;
-    background-color: $riley-red;
+    background-color: $red;
     // transform: translateY(20px);
     backface-visibility: visible;
     &:first-child {
-      color: $riley-red;
+      color: $red;
       background-color: $blue;
       transform: none;
     }
@@ -74,7 +74,7 @@
   opacity: 0.75;
 
   &:first-child {
-    background-color: $riley-red;
+    background-color: $red;
     mix-blend-mode: none;
     opacity: 1.0;
   }
