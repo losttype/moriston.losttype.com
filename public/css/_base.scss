@@ -14,8 +14,6 @@ body {
 }
 
 [contenteditable] {
-  opacity: 0.66;
-  transition: opacity 0.25s ease-in-out;
   -webkit-user-modify: read-write-plaintext-only;
   -moz-user-modify: read-write-plaintext-only;
   -ms-user-modify: read-write-plaintext-only;
@@ -23,13 +21,25 @@ body {
   outline-color: transparent;
   outline: none;
   word-wrap: break-word;
-  word-break: break-all;
   overflow-x: scroll;
   &:focus,
   &:hover,
   &:active {
     opacity: 1;
-    outline: none;
+  }
+  b, strong, i, em, dfn, small, code, a {
+    display: inline;
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    line-height: inherit;
+    text-decoration: inherit;
+    color: inherit !important;
+    background: transparent !important;
+  }
+  img {
+    display: none;
+    visibility: hidden;
   }
 }
 

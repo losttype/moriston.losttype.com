@@ -1,11 +1,25 @@
 .simpleTester {
-  // padding: 2em 0;
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // iOS
+  -webkit-tap-highloght-color: transparent;   // Android
+
+  // Bram Stein ☞ http://blog.typekit.com/2014/02/05/kerning-on-the-web/
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
 
   line-height: 1.4;
   padding: 3em 0;
   border-bottom: 1px solid;
-  text-align: center;
-
+  text-align: left;
+  opacity: 0.66;
+  transition: opacity 0.33s ease-in-out;
+  &:focus,
+  &:hover,
+  &:active {
+    opacity: 1;
+  }
   @media (min-width: 30em) {
     margin-left: -5%;
     margin-right: -5%;
@@ -18,5 +32,4 @@
     padding-left: 25%;
     padding-right: 25%;
   }
-
 }
