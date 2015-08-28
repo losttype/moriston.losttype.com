@@ -3,14 +3,11 @@ require('fontfaceobserver')
 var Editable = require('contenteditable')
 
 var contentEditable = document.querySelectorAll('[contenteditable]')
+var nodes = document.querySelectorAll('.js-fitterHappier')
 var fitterHappierPaddingY = 3
 
 var fitterHappier = function (nodes) {
-  // fitterHappierText(nodes, { paddingY: fitterHappierPaddingY, baseline: 14 })
-  console.log(nodes)
-
-  bigIdeasText(nodes, { maxfontsize: 60 })
-  console.log(nodes)
+  bigIdeasText(nodes, { maxfontsize: 250, minfontsize: 30 })
 }
 
 // TODO
@@ -40,12 +37,12 @@ var editableEvents = function (el) {
   var editable = new Editable(el)
   editable.enable()
   editable.on('change', function (e) {
-    console.log(el.innerText)
-    bigIdeasText(el)
+    // console.log(el.innerText)
+    fitterHappier(el)
     // fitterHappierAgain(el, { paddingY: fitterHappierPaddingY })
     // if (el.innerText === '' && el.hasChildNodes() === true) {
     //   el.children[0].children[0].innerHTML = 'Try me…'
-    //   // console.log(el.children[0].children[0].innerHTML)
+      // console.log(el.children[0].children[0].innerHTML)
     //   // el.innerText = '…'
     //   fitterHappierAgain(el)
     // }
@@ -60,7 +57,7 @@ var editableInit = function () {
   }
 }
 
-var nodes = document.querySelectorAll('.js-fitterHappier')
+
 var observer = new FontFaceObserver('Moriston')
 var observerRegular = new FontFaceObserver('Moriston', {
   weight: 400
@@ -69,19 +66,20 @@ var observerRegular = new FontFaceObserver('Moriston', {
 observerRegular
   .check()
   .then(function () {
-    console.log('Moriston regular is available')
+    // console.log('Moriston regular is available')
 
     // Load remainder of family
     observer
       .check()
       .then(function () {
-        console.log('Loaded remainder of Moriston!')
-        fitterHappier(nodes)
+        // console.log('Loaded remainder of Moriston!')
+
         editableInit()
+        fitterHappier(nodes)
       }, function () {
-        console.log('Remainder of font is not available')
+        // console.log('Remainder of font is not available')
       })
 
   }, function () {
-    console.log('Font is not available')
+    // console.log('Font is not available')
   })
