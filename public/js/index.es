@@ -10,10 +10,12 @@ var scaleText = function (nodes) {
 var editableEvents = function (el) {
   var editable = new Editable(el)
   editable.enable()
-  editable.on('change', function (e) {
-    editablePaste()
-    scaleText(el)
-  })
+  if (hasClass(editable.element, 'js-scaleText')) {
+    editable.on('change', function (e) {
+      editablePaste(e)
+      scaleText(el)
+    })
+  }
 }
 
 var editableInit = function () {
@@ -24,11 +26,11 @@ var editableInit = function () {
   }
 }
 
-var editablePaste = function() {
+var editablePaste = function(e) {
   if (!('-webkit-user-modify' in document.body.style) && !('user-modify' in document.body.style)) {
     if(e.type === 'paste') {
       // Derived from http://stackoverflow.com/a/19327995
-      var content = ((e.originalEvent || e).clipboardData || window.clipboardData).getData('Text');
+      var content = ((e.originalEvent || e).clipboardData || window.clipboardData).getData('Text')
       if (typeof e.target.innerText !== 'undefined') {
         e.target.innerText = e.target.innerText + content
       } else {
@@ -36,6 +38,14 @@ var editablePaste = function() {
         e.target.textContent = e.target.textContent + content
       }
     }
+  }
+}
+
+var hasClass = function(el, className) {
+  if (el.classList) {
+    return el.classList.contains(className)
+  } else {
+    return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className)
   }
 }
 
