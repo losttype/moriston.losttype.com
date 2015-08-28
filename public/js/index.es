@@ -6,8 +6,11 @@ var contentEditable = document.querySelectorAll('[contenteditable]')
 var fitterHappierPaddingY = 3
 
 var fitterHappier = function (nodes) {
+  // fitterHappierText(nodes, { paddingY: fitterHappierPaddingY, baseline: 14 })
   console.log(nodes)
-  fitterHappierText(nodes, { paddingY: fitterHappierPaddingY, baseline: 14 })
+
+  bigIdeasText(nodes, { maxfontsize: 60 })
+  console.log(nodes)
 }
 
 // TODO
@@ -21,20 +24,31 @@ var fitterHappierAgain = function (el, options) {
   var paddingY = options.paddingY || 0
   var svg = el.firstChild
   var text = svg.firstChild
-  console.log('svg', svg)
-  var width = text.offsetWidth || text.getComputedTextLength()
+  var widthComputed = text.offsetWidth || text.getComputedTextLength()
+  var widthMax = 42
   var height = text.offsetHeight || 24
 
-  svg.setAttribute('viewBox', '0 0 ' + width + ' ' + (height + paddingY))
+
+  if (widthComputed <= widthMax) {
+    return false
+  } else {
+    return svg.setAttribute('viewBox', '0 0 ' + widthComputed + ' ' + (height + paddingY))
+  }
 }
 
 var editableEvents = function (el) {
   var editable = new Editable(el)
   editable.enable()
   editable.on('change', function (e) {
-    console.log('e', e)
-    e.preventDefault()
-    fitterHappierAgain(el, { paddingY: fitterHappierPaddingY })
+    console.log(el.innerText)
+    bigIdeasText(el)
+    // fitterHappierAgain(el, { paddingY: fitterHappierPaddingY })
+    // if (el.innerText === '' && el.hasChildNodes() === true) {
+    //   el.children[0].children[0].innerHTML = 'Try me…'
+    //   // console.log(el.children[0].children[0].innerHTML)
+    //   // el.innerText = '…'
+    //   fitterHappierAgain(el)
+    // }
   })
 }
 

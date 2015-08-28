@@ -16,6 +16,14 @@ body {
 [contenteditable] {
   opacity: 0.8;
   transition: opacity 0.25s ease-in-out;
+  -webkit-user-modify: read-write-plaintext-only;
+  -moz-user-modify: read-write-plaintext-only;
+  -ms-user-modify: read-write-plaintext-only;
+  user-modify: read-write-plaintext-only;
+  outline-color: transparent;
+  outline: none;
+  word-wrap: normal;
+  white-space: initial;
   &:focus,
   &:hover {
     opacity: 1;

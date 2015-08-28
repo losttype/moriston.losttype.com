@@ -60,32 +60,22 @@ html
 
       h1.h1--temp <strong>Moriston.</strong> A typeface by Riley Cran.
       
-      div(contenteditable)
-        .simpleTester.u-fontWeight--400
+      div(contenteditable).simpleTester.u-fontWeight--400
           p <strong>Edit Me.</strong> Riley Cran is a designer based in the Pacific Northwest with a specialty in Identity, Packaging and Illustration. 
           p Aspiring to create characterful and functional work, Riley merges historical influences with modern, contemporary solutions that are relevant in 2014. 
           p Do you need something designed?
-      div(contenteditable)
-        .simpleTester.u-fontWeight--300.js-fitterHappier San Francisco
-      div(contenteditable)
-        .simpleTester.u-fontWeight--400.js-fitterHappier New York
-      div(contenteditable)
-        .simpleTester.u-fontWeight--500.js-fitterHappier Amsterdam
-      div(contenteditable)
-        .simpleTester.u-fontWeight--700.js-fitterHappier Chicago
-      div(contenteditable)
-        .simpleTester.u-fontWeight--900.js-fitterHappier Vancouver
-      div(contenteditable)
-        .simpleTester.u-fontWeight--300.js-fitterHappier 1452
+      div(contenteditable).simpleTester
+        span.u-fontWeight--300.js-fitterHappier San Francisco
+      div(contenteditable).simpleTester
+        span.u-fontWeight--400.js-fitterHappier New York
+      div(contenteditable).simpleTester
+        span.u-fontWeight--500.js-fitterHappier Amsterdam
+      div(contenteditable).simpleTester
+        span.u-fontWeight--700.js-fitterHappier Chicago
+      div(contenteditable).simpleTester
+        span.u-fontWeight--900.js-fitterHappier Vancouver
+      div(contenteditable).simpleTester
+        span.u-fontWeight--300.js-fitterHappier 1452
 
-
-      //- .js-typeTester Cordova
-      //- 
-      script(src="/js/index.js")
-      //- script.
-      //-   var typeTesterOpts = {
-      //-     families: ['Moriston:n3,n4,n5,n7,n9'],
-      //-     pathToFonts: '/fonts/',
-      //-     minFontSize: 10
-      //-   }
-      //- script(src="/js/vendor/type-tester.js" async defer onload="TypeTester('.js-typeTester', typeTesterOpts)")
+    script(src="https://rawgit.com/kennethormandy/big-ideas-text/master/dist/big-ideas-text.js")
+    script(src="/js/index.js")
