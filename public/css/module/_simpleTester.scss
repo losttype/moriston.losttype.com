@@ -9,12 +9,12 @@
   font-feature-settings: "kern" 1;
   font-kerning: normal;
 
-  line-height: 1.4;
-  padding: 3em 0;
-  border-bottom: 1px solid;
+  line-height: 1.5;
+  padding: 0.5em;
   text-align: left;
-  opacity: 0.66;
+  opacity: 0.8;
   transition: opacity 0.33s ease-in-out;
+  margin-bottom: 1em;
   &:focus,
   &:hover,
   &:active {

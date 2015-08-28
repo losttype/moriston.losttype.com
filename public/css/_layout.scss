@@ -1,22 +1,21 @@
 .container {
-  max-width: 50em;
+  max-width: 50rem;
   margin-left: auto;
   margin-right: auto;
   padding: 1em;
-  @media (min-width: 30em) {
-    padding: 0;
-    max-width: 50em;
-  }
+    overflow-x: hidden; // Don’t actually do this…
 }
 
 .grid {
   display: flex;
-  max-width: 75rem;
+  // max-width: 75rem;
   margin: 0 auto;
 }
 
 .grid__cell {
   flex: 1;
+  height: 5em;
+  // height: 5em;
 }
 
 // Square
@@ -30,15 +29,18 @@
   user-select: none;
   speak: none;
   cursor: default;
-
-  // Temp
-  overflow: hidden;
-
+  //
+  // // Temp
+  overflow: hidden !important;
+  z-index: 0;
 }
 
 .square__content {
+  flex: 1;
+  z-index: 1;
+  opacity: 0.5;
+
   display: flex;
-  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -70,26 +72,42 @@
 
   background-color: $blue;
   color: white;
-  mix-blend-mode: multiply;
-  opacity: 0.75;
+  opacity: 1.0;
 
   &:first-child {
     background-color: $red;
-    mix-blend-mode: none;
-    opacity: 1.0;
+  }
+
+  &:nth-child(2) {
+    mix-blend-mode: multiply;
+    opacity: 0.75;
   }
 
   &:hover {
-    mix-blend-mode: none !important;
+    // mix-blend-mode: none !important;
   }
 
   @media (min-width: 30em) {
     font-size: 30em;
   }
+  @media (min-height: 30em) {
+    font-size: 30em;
+  }
 
+
+}
+
+.square__content + .square__content {
+  z-index: 10;
+  position: absolute;
+  left: 0; top: 0; right: 0; bottom: 0;
 }
 
 .square__content--centered {
   align-items: center;
   justify-content: center;
 }
+
+// .square:nth-child(n-2) .square__content {
+//   position: fixed;
+// }

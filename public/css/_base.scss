@@ -7,10 +7,13 @@ html {
 }
 
 body {
-  margin: 0;
-  @media (min-width: 30em) {
-    margin: 1em;
-  }
+  font-size: 1.25em;
+  line-height: 1.38;
+  letter-spacing: 0.01em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 0;
 }
 
 [contenteditable] {
@@ -47,6 +50,9 @@ body {
   font-weight: 500;
   color: $red;
   font-family: $base-font-family;
+  @media (min-width: 30em) {
+    font-size: 3em;
+  }
   strong {
     font-weight: 900;
   }
@@ -54,4 +60,11 @@ body {
 
 .caps {
   @extend abbr;
+}
+
+.knockout {
+  background-color: $blue;
+  color: #FFF;
+  padding-top: 3em;
+  padding-bottom: 3em;
 }
