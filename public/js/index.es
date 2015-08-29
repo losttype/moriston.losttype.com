@@ -55,8 +55,8 @@ observer
   .check()
   .then(function () {
     console.log('Moriston is available!')
-    editableInit()
     scaleText(nodes)
+    editableInit()
   }, function () {
     console.log('Moriston is not available')
   })
