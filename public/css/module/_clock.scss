@@ -1,0 +1,84 @@
+// Clock
+//
+// The clock module for displaying
+// Moriston as a live, analogue clock.
+// Inspired by http://codepen.io/m412c0/pen/bFafi
+//
+// Tremplate: ../../_includes/clock.jade
+
+.clock {
+	border-radius: 50%;
+  width: 18rem;
+  height: 18rem;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+}
+
+.clock-center,
+.clock-seconds,
+.clock-minutes,
+.clock-hours {
+	left: 50%;
+	position: absolute;
+	top: 50%;
+}
+
+.clock-center {
+	border-radius: 50%;
+	margin: -6px 0 0 -6px;
+  height: 1rem;
+  width: 1rem;
+	z-index: 4;
+}
+
+.clock-seconds {
+	background: #c40206;
+	height: 10rem;
+	margin: -10rem 0 0 -1px;
+	transform-origin: 1px 10rem;
+	transform: rotate(0deg);
+	width: 2px;
+  z-index: 3;
+}
+
+.clock-minutes {
+	background: #aaa;
+	border-radius: 4px;
+	height: (10rem / 1.25);
+	margin: (-10rem / 1.25) 0 0 -2px;
+	transform-origin: 2px (10rem / 1.25);
+	transform: rotate(0deg);
+	width: 4px;
+  z-index: 2;
+}
+
+.clock-hours {
+	background: #333;
+	height: (10rem / 1.5);
+	margin: (-10rem / 1.5) 0 0 -3px;
+	transform-origin: 3px (10rem / 1.5);
+	transform: rotate(0deg);
+	width: 6px;
+  z-index: 1;
+}
+
+.clock-numbers {
+  @include putOnCircle(12, 18rem, 2rem, false);
+
+	display: block;
+	font-size: 1rem;
+  margin: 0;
+  padding: 0;
+	// margin: -60px 0 0 -60px;
+	// left: 50%;
+	// position: absolute;
+	// top: 50%;
+	width: 100%;
+  height: 18rem;
+  max-width: 18rem;
+  li {
+    text-align: center;
+    line-height: 2rem;
+  }
+}

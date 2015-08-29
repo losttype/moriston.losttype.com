@@ -1,0 +1,57 @@
+// Circle
+//
+// http://hugogiraudel.com/2013/04/02/items-on-circle/
+//
+// No styleguide reference.
+@mixin putOnCircle(
+          $nb-items, //Number of items
+          $circle-size, //Parent size
+          $item-size, //Item size
+          $class-for-IE: false //Base class name, false means use of pseudo-selectors
+       ) {
+  $half-item:     $item-size / 2;
+  $half-parent: $circle-size / 2;
+
+  position: relative;               /* [1] */
+  width:  $circle-size;
+  height: $circle-size;
+  padding: 0;
+  border-radius: 50%;
+  list-style: none;                 /* [2] */
+  box-sizing: content-box; /* [3] */
+
+  > * {                             /* [4] */
+    display: block;
+    position: absolute;
+    top:  50%;
+    left: 50%;
+    width:  $item-size;
+    height: $item-size;
+    margin: -$half-item;
+
+    $angle: 360 / $nb-items;
+    $rot: 0;
+    @for $i from 1 to $nb-items+1 {
+
+      // If no support for IE8-
+
+      @if $class-for-IE == false {
+        &:nth-of-type(#{$i}) {
+          transform: rotate(#{$rot}deg) translate($half-parent) rotate(-#{$rot}deg);
+        }
+      }
+
+      // If support for IE8-
+
+      @else {
+        &.#{$class-for-IE}#{$i} {
+          // If CSS transforms are not supported
+          $mt: sin($rot * pi() / 180) * $half-parent - $half-item;
+          $ml: cos($rot * pi() / 180) * $half-parent - $half-item;
+          margin: $mt 0 0 $ml;
+        }
+      }
+      $rot: $rot + $angle;
+    }
+  }
+}

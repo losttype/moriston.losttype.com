@@ -49,6 +49,35 @@ var hasClass = function(el, className) {
   }
 }
 
+var clock = function () {
+  console.log('start the clock')
+
+	var clockSeconds = document.getElementById('js-clockS')
+	var clockMinutes = document.getElementById('js-clockM')
+	var clockHours = document.getElementById('js-clockH')
+
+  console.log(clockSeconds)
+
+	function getTime() {
+
+		var date = new Date()
+		var seconds = date.getSeconds()
+		var minutes = date.getMinutes()
+		var hours = date.getHours()
+
+		var degSeconds = seconds * 360 / 60
+		var degMinutes = (minutes + seconds / 60) * 360 / 60
+		var degHours = (hours + minutes / 60 + seconds / 60 / 60) * 360 / 12
+
+		clockSeconds.setAttribute('style', '-webkit-transform: rotate(' + degSeconds + 'deg); -moz-transform: rotate(' + degSeconds + 'deg); -ms-transform: rotate(' + degSeconds + 'deg); -o-transform: rotate(' + degSeconds + 'deg); transform: rotate(' + degSeconds + 'deg);')
+		clockMinutes.setAttribute('style', '-webkit-transform: rotate(' + degMinutes + 'deg); -moz-transform: rotate(' + degMinutes + 'deg); -ms-transform: rotate(' + degMinutes + 'deg); -o-transform: rotate(' + degMinutes + 'deg); transform: rotate(' + degMinutes + 'deg);')
+		clockHours.setAttribute('style', '-webkit-transform: rotate(' + degHours + 'deg); -moz-transform: rotate(' + degHours + 'deg); -ms-transform: rotate(' + degHours + 'deg); -o-transform: rotate(' + degHours + 'deg); transform: rotate(' + degHours + 'deg);')
+	}
+
+	setInterval(getTime, 1000)
+	getTime()
+}
+
 var observer = new FontFaceObserver('Moriston')
 
 observer
@@ -57,6 +86,7 @@ observer
     console.log('Moriston is available!')
     scaleText(nodes)
     editableInit()
+    clock()
   }, function () {
     console.log('Moriston is not available')
   })

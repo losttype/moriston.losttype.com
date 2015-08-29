@@ -1,5 +1,8 @@
 // moriston.losttype.com
 
+// Mixins
+@import "mixins/putOnCircle";
+
 // Base
 @import "../../node_modules/normalize.css/normalize";
 @import "variables";
@@ -12,6 +15,7 @@
 @import "module/utility";
 @import "module/simpleTester";
 @import "../../node_modules/normalize-opentype.css/normalize-opentype";
+@import "module/clock";
 
 // State
 // @import "state";
