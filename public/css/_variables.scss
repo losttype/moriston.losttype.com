@@ -1,6 +1,13 @@
 // Variables
 
-$base-font-family: "Moriston", "Helvetica Neue", "Helvetcia", Arial, sans-serif;
+$font-family-sans: "Moriston", "Helvetica Neue", "Helvetcia", Arial, sans-serif;
+$base-font-family: $font-family-sans;
+$base-line-height: 1.45;
+$font-size-small: 0.85rem;
+$color-background: #FFF;
+$base-border-radius: 5px;
+$base-transition-duration: 0.25s;
+$base-transition-function: ease-in-out; // Don’t make Ben cry
 
 $black: #404040;
 

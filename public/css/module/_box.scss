@@ -64,7 +64,7 @@
     border-top-left-radius: 0.25em;
     border-top-right-radius: 0.25em;
     backface-visibility: visible;
-    background: #FFF;
+    background: $color-background;
   }
   .box-front {
     border-bottom-right-radius: 0.33em;
@@ -76,7 +76,7 @@
     border-radius: 0.25em;
   }
   .box-top {
-    background: #FFF;
+    background: $color-background;
   }
   .box-left,
   .box-right {
@@ -85,7 +85,7 @@
     box-sizing: border-box;
     color: mix($black, white, 25%);
     border-bottom-left-radius: 0.25em;
-    background: darken(#FFF, 10%);
+    background: darken($color-background, 10%);
     background: linear-gradient(to top, darken(desaturate($red, 20%), 15%) 0%, darken(desaturate($red, 20%), 10%) 33%, rgba(255,255,255,1) 33.1%, rgba(255,255,255,1) 100%);
   }
   .simpleTester {
