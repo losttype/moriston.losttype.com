@@ -13,9 +13,10 @@ $red-dark: darken($red, 10%);
 $red-light: lighten($red, 10%);
 
 $blue: #0096CA;
-$blue-dark: darken($blue, 10%);
+$blue-dark: saturate(mix($blue, black, 75%), 50%);
 $blue-light: lighten($blue, 10%);
 
 $purple: #654352;
 $purple-dark: darken($purple, 10%);
 $purple-light: lighten($purple, 10%);
+$purple-lighter: lighten($purple, 20%);

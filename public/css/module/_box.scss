@@ -1,0 +1,127 @@
+.knockout {
+  padding-bottom: 30em;
+}
+
+.box-container {
+  perspective: 1000;
+  height: 30em;
+  margin: -20em auto 20em auto;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.box-side {
+  margin: 0;
+  display: block;
+  position: absolute;
+}
+
+.box-front,
+.box-back {
+  width: 300px;
+  height: 400px;
+}
+
+.box-right,
+.box-left {
+  width: 100px;
+  height: 400px;
+  left: 100px;
+}
+
+.box-top,
+.box-bottom {
+  width: 300px;
+  height: 100px;
+  top: 50px;
+}
+
+.box-bottom {
+  top: 250px;
+}
+
+.box-front  { transform: rotateY(   0deg ) translateZ(  50px ); }
+.box-back   { transform: rotateX( 180deg ) translateZ(  50px ); }
+.box-right  { transform: rotateY(  90deg ) translateZ( 150px ); }
+.box-left   { transform: rotateY( -90deg ) translateZ( 150px ); }
+.box-top    { transform: rotateX(  90deg ) translateZ( 100px ); }
+.box-bottom { transform: rotateX( -90deg ) translateZ( 100px ); }
+
+.box  { transform: translateZ(  -50px ) rotateY(    45deg ); }
+
+
+// Sugar
+
+.sugar {
+  color: $black;
+  .box-side {
+    border-top-left-radius: 0.25em;
+    border-top-right-radius: 0.25em;
+    backface-visibility: visible;
+    background: #FFF;
+  }
+  .box-front {
+    border-bottom-right-radius: 0.33em;
+    background: linear-gradient(to top, darken(desaturate($red, 20%), 12%) 0%, darken(desaturate($red, 20%), 10%) 33%, rgba(255,255,255,1) 33.1%, rgba(255,255,255,1) 100%);
+  }
+  .box-back,
+  .box-bottom,
+  .box-top {
+    border-radius: 0.25em;
+  }
+  .box-top {
+    background: #FFF;
+  }
+  .box-left,
+  .box-right {
+    font-size: 0.25rem;
+    padding: 1em;
+    box-sizing: border-box;
+    color: mix($black, white, 25%);
+    border-bottom-left-radius: 0.25em;
+    background: darken(#FFF, 10%);
+    background: linear-gradient(to top, darken(desaturate($red, 20%), 15%) 0%, darken(desaturate($red, 20%), 10%) 33%, rgba(255,255,255,1) 33.1%, rgba(255,255,255,1) 100%);
+  }
+  .simpleTester {
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    opacity: 1;
+    color: $blue;
+    transition: color 0.25s ease-in-out; // Don’t make Ben cry
+    &:hover,
+    &:active,
+    &:focus {
+      color: $black;
+    }
+    span {
+      box-sizing: border-box;
+      padding: 0 0.25em;
+    }
+  }
+}
+
+.sugar-weight,
+.sugar-mark {
+  color: $blue;
+  display: block;
+  text-align: center;
+  padding: 0 1em;
+  line-height: 1;
+}
+
+.sugar-weight {
+  padding: 1em;
+}
+
+.sugar-mark {
+  color: $red;
+  font-family: "Viktor Script", "Moriston";
+  font-size: 2em;
+}
