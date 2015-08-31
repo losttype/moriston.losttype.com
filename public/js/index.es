@@ -68,7 +68,6 @@ var clock = function () {
 		var degMinutes = (minutes + seconds / 60) * 360 / 60
 		var degHours = (hours + minutes / 60 + seconds / 60 / 60) * 360 / 12
 
-    console.log(hours)
     if ((hours >= 23 || hours <= 4) && typeof clockContainer.classList !== 'undefined') {
       clockContainer.parentNode.parentNode.classList.add('knockout', 'knockout--purple')
     } else {
