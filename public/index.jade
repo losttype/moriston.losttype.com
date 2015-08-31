@@ -63,8 +63,10 @@ html
       .grid__cell.square
         .square__content.square__content--centered.u-fontWeight--900 %
         .square__content.square__content--centered.u-fontWeight--900 C
-    .container#clock
-      include _includes/clock
+    //- Will be knockouted out at night
+    div
+      .container#clock
+        include _includes/clock
 
     .knockout
       .container
@@ -80,7 +82,14 @@ html
           span.u-fontWeight--700 Chicago
         div(contenteditable spellcheck="false").simpleTester.js-scaleText
           span.u-fontWeight--900 Vancouver
-
+          
+    .knockout.knockout--darkBlue#sugar
+      .container#sugar
+        include _includes/sugar
+    
+    .knockout.knockout--purple
+      .container#record
+        include _includes/_recordbooth
 
     script(src="https://rawgit.com/kennethormandy/big-ideas-text/master/dist/big-ideas-text.js")
     script(src="/js/index.js")

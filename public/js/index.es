@@ -50,8 +50,7 @@ var hasClass = function(el, className) {
 }
 
 var clock = function () {
-  console.log('start the clock')
-
+  var clockContainer = document.getElementById('js-clock')
 	var clockSeconds = document.getElementById('js-clockS')
 	var clockMinutes = document.getElementById('js-clockM')
 	var clockHours = document.getElementById('js-clockH')
@@ -68,6 +67,13 @@ var clock = function () {
 		var degSeconds = seconds * 360 / 60
 		var degMinutes = (minutes + seconds / 60) * 360 / 60
 		var degHours = (hours + minutes / 60 + seconds / 60 / 60) * 360 / 12
+
+    console.log(hours)
+    if ((hours >= 23 || hours <= 4) && typeof clockContainer.classList !== 'undefined') {
+      clockContainer.parentNode.parentNode.classList.add('knockout', 'knockout--purple')
+    } else {
+      clockContainer.parentNode.parentNode.classList.remove('knockout', 'knockout--purple')
+    }
 
 		clockSeconds.setAttribute('style', '-webkit-transform: rotate(' + degSeconds + 'deg); -moz-transform: rotate(' + degSeconds + 'deg); -ms-transform: rotate(' + degSeconds + 'deg); -o-transform: rotate(' + degSeconds + 'deg); transform: rotate(' + degSeconds + 'deg);')
 		clockMinutes.setAttribute('style', '-webkit-transform: rotate(' + degMinutes + 'deg); -moz-transform: rotate(' + degMinutes + 'deg); -ms-transform: rotate(' + degMinutes + 'deg); -o-transform: rotate(' + degMinutes + 'deg); transform: rotate(' + degMinutes + 'deg);')
