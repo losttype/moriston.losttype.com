@@ -1,3 +1,38 @@
+// Button mixin
+//
+// See `.button`.
+//
+// No styleguide reference.
+@mixin button($background: $red, $highlight: desaturate(darken($background, 20%), 10%)) {
+  color: lighten($color-background, 7.5%);
+  text-align: center;
+  font-family: $font-family-sans;
+  font-weight: 500;
+  border: 1px solid $background;
+  background: $background;
+  line-height: $base-line-height;
+  border-radius: $base-border-radius;
+  transition: color $base-transition-duration $base-transition-function, border-color $base-transition-duration $base-transition-function, background $base-transition-duration $base-transition-function, opacity $base-transition-duration $base-transition-function;
+  text-shadow: none;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $background;
+    border-color: $highlight;
+    background: $highlight;
+  }
+  &.button-secondary {
+    color: $background;
+    background: transparent;
+    border: 0;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $highlight;
+    }
+  }
+}
+
 // Circle
 //
 // http://hugogiraudel.com/2013/04/02/items-on-circle/

@@ -1,7 +1,7 @@
 // moriston.losttype.com
 
 // Mixins
-@import "mixins/putOnCircle";
+@import "mixins";
 
 // Base
 @import "../../node_modules/normalize.css/normalize";
@@ -13,6 +13,7 @@
 
 // Module
 @import "module/utility";
+@import "module/button";
 @import "module/simpleTester";
 @import "../../node_modules/normalize-opentype.css/normalize-opentype";
 @import "module/box";

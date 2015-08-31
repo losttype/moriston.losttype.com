@@ -1,0 +1,93 @@
+// Button
+//
+// Buttons for user interfaces and promotional purposes.
+//
+// .button--large     - A large button, when more attention is necessary.
+// .button--small     - A smaller button, for less conspicuious UI.
+// .button--muted     - A quieter button, for less conspicuious UI.
+//
+// Markup:
+// <a class="button {{modifier_class}}" href="#">Download</a>
+//
+// Styleguide: module.button
+button,
+input[type="button"],
+input[type="submit"],
+.button,
+a.button {
+  @include button;
+  padding: 0.7em 2.5em 0.8em 2.5em;
+  width: 100%;
+  display: block;
+  text-decoration: none;
+  appearance: none;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.button--large,
+a.button--large {
+  padding: 1em 4em;
+  @media (min-width: 35em) {
+    width: auto;
+    max-width: auto;
+    padding-left: 4em;
+    padding-right: 4em;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 1em;
+  }
+}
+
+// Button secondary
+//
+// A button with a following link as a secondary option.
+//
+// .button--primary   - A link following a button with the primary colour scheme
+// .button--muted     - A link following a button with the muted colour scheme
+//
+// Markup:
+// <a class="button button--large" href="#">Buy a commercial license</a>
+// <a class="button-secondary {{modifier_class}}" href="#">No thanks, maybe later</a>
+//
+// Styleguide: module.button-secondary
+.button-secondary {
+  display: block;
+  width: auto;
+  text-align: center;
+  font-weight: inherit;
+  font-family: $base-font-family;
+  margin-top: 1em;
+  padding: 1em;
+
+  & + .button-secondary {
+    display: block;
+  }
+  .button + & {
+    font-size: $font-size-small;
+    margin-bottom: $base-line-height * 1em;
+  }
+  // This isn’t very reusable
+  // Might want to get rid of it anyway, button
+  // should toggle the form visibility there
+  & + .form {
+    margin-top: $base-line-height * 1em;
+  }
+  &.button--primary {
+    color: $red;
+  }
+  @media (min-width: 35em) {
+    display: inline-block;
+    text-align: left;
+    input + & {
+      // Fix for weird positioning after inputs
+      transform: translateY($base-line-height * 0.5em);
+    }
+  }
+}
