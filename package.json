@@ -14,7 +14,9 @@
   "keywords": [],
   "dependencies": {
     "contenteditable": "0.3.0",
-    "dropcap.js": "^1.0.0"
+    "dropcap.js": "^1.0.0",
+    "html2canvas": "0.5.0-alpha2",
+    "webcamjs": "1.0.4"
   },
   "devDependencies": {
     "fontfaceobserver": "1.5.1",
@@ -26,7 +28,9 @@
     "terraform": "kennethormandy/terraform#ko-browserify-personal"
   },
   "standard": {
-    "global": [ "FontFaceObserver" ]
+    "global": [
+      "FontFaceObserver"
+    ]
   },
   "scripts": {
     "lint": "standard public/js/index.es",
