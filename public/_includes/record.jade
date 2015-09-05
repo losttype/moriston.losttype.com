@@ -1,6 +1,6 @@
 != partial('./record-filter.ejs')
 
-.record-container
+.record-container#js-renderFrame
   .record
     .record-cover
       .record-image#js-webcamCamera
@@ -11,6 +11,9 @@
       .simpleTester.js-scaleText(contenteditable spellcheck="false")
         span.bigIdeasText-exempt Lost Type Co-op Records
       span.record-watermark moriston.losttype.com
+
+#js-renderResult
+
 
 #js-takeButtonsPre
   button.button.button--large#js-webcamShutter Add your face

@@ -1,5 +1,7 @@
 require('fontfaceobserver')
+var Webcam = require('webcamjs')
 var Editable = require('contenteditable')
+// var html2canvas = require('../../node_modules/html2canvas/dist/html2canvas.min.js')
 var contentEditable = document.querySelectorAll('[contenteditable]')
 var nodes = document.querySelectorAll('.js-scaleText')
 
@@ -100,6 +102,9 @@ clock()
 
 var shutterButton = document.getElementById('js-webcamShutter')
 var shutterRetake = document.getElementById('js-webcamRetake')
+var webcamCamera = document.getElementById('js-webcamCamera')
+var renderFrame = document.getElementById('js-renderFrame')
+var renderResult = document.getElementById('js-renderResult')
 
 var cameraCancel = function () {
   Webcam.unfreeze()
@@ -108,27 +113,32 @@ var cameraCancel = function () {
 }
 
 var cameraSave = function () {
-  // Webcam.snap(function (data_uri) {
-  //   document.getElementById('js-webcamResult').innerHTML = '<img src="' + data_uri + '" />'
-  // })
+  console.log('ready to save!')
 
-  // Then do sharing stuff
+  var canvas = webcamCamera.querySelector('canvas')
+  console.log(html2canvas)
 
+  html2canvas(renderFrame).then(function(canvas) {
+    console.log('render')
+    var img = document.createElement('img')
+    img.setAttribute('src', canvas.toDataURL("image/png"))
+    renderResult.appendChild(img)
 
-  // Put buttons back to default
-  cameraReady(cameraSave)
+    // Then do sharing stuff
 
+    // Put buttons back to default
+    cameraReady(cameraSave)
+  })
 }
 
 var cameraPreview = function () {
   console.log('camera preview')
   Webcam.freeze()
 
-  shutterButton.removeEventListener('click', cameraPreview, false)
-  shutterButton.innerHTML = 'Share cover'
-  shutterButton.addEventListener('click', cameraSave, false)
-  // Un-hide re-take option
   shutterRetake.classList.remove('is-hidden')
+  shutterButton.innerHTML = 'Share cover'
+  shutterButton.removeEventListener('click', cameraPreview, false)
+  shutterButton.addEventListener('click', cameraSave, false)
 }
 
 
@@ -146,9 +156,7 @@ var cameraInit = function () {
   Webcam.set({
     width: 480,
     height: 320,
-    // dest_width: 480,
-    // dest_height: 320,
-    // flip_horiz: true,
+    // flip_horiz: true, // Doing this manually in CSS
     fps: 20
   })
 

@@ -22,6 +22,11 @@
   margin-bottom: 2em;
 }
 
+.record-result {
+  position: relative;
+  z-index: 1;
+}
+
 .record-image {
   transform: scale(2) scaleX(-1) !important;
   transform-origin: top center;
