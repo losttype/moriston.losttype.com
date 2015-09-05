@@ -26,7 +26,7 @@ var editableInit = function () {
   }
 }
 
-var editablePaste = function(e) {
+var editablePaste = function (e) {
   if (!('-webkit-user-modify' in document.body.style) && !('user-modify' in document.body.style)) {
     if(e.type === 'paste') {
       // Derived from http://stackoverflow.com/a/19327995
@@ -41,7 +41,7 @@ var editablePaste = function(e) {
   }
 }
 
-var hasClass = function(el, className) {
+var hasClass = function (el, className) {
   if (el.classList) {
     return el.classList.contains(className)
   } else {
@@ -49,13 +49,12 @@ var hasClass = function(el, className) {
   }
 }
 
+// Inspired by http://codepen.io/m412c0/pen/bFafi
 var clock = function () {
   var clockContainer = document.getElementById('js-clock')
 	var clockSeconds = document.getElementById('js-clockS')
 	var clockMinutes = document.getElementById('js-clockM')
 	var clockHours = document.getElementById('js-clockH')
-
-  console.log(clockSeconds)
 
 	function getTime() {
 
@@ -74,9 +73,9 @@ var clock = function () {
       clockContainer.parentNode.parentNode.classList.remove('knockout', 'knockout--purple')
     }
 
-		clockSeconds.setAttribute('style', '-webkit-transform: rotate(' + degSeconds + 'deg); -moz-transform: rotate(' + degSeconds + 'deg); -ms-transform: rotate(' + degSeconds + 'deg); -o-transform: rotate(' + degSeconds + 'deg); transform: rotate(' + degSeconds + 'deg);')
-		clockMinutes.setAttribute('style', '-webkit-transform: rotate(' + degMinutes + 'deg); -moz-transform: rotate(' + degMinutes + 'deg); -ms-transform: rotate(' + degMinutes + 'deg); -o-transform: rotate(' + degMinutes + 'deg); transform: rotate(' + degMinutes + 'deg);')
-		clockHours.setAttribute('style', '-webkit-transform: rotate(' + degHours + 'deg); -moz-transform: rotate(' + degHours + 'deg); -ms-transform: rotate(' + degHours + 'deg); -o-transform: rotate(' + degHours + 'deg); transform: rotate(' + degHours + 'deg);')
+		clockSeconds.setAttribute('style', '-webkit-transform: rotate(' + degSeconds + 'deg); -moz-transform: rotate(' + degSeconds + 'deg); -ms-transform: rotate(' + degSeconds + 'deg); transform: rotate(' + degSeconds + 'deg);')
+		clockMinutes.setAttribute('style', '-webkit-transform: rotate(' + degMinutes + 'deg); -moz-transform: rotate(' + degMinutes + 'deg); -ms-transform: rotate(' + degMinutes + 'deg); transform: rotate(' + degMinutes + 'deg);')
+		clockHours.setAttribute('style', '-webkit-transform: rotate(' + degHours + 'deg); -moz-transform: rotate(' + degHours + 'deg); -ms-transform: rotate(' + degHours + 'deg); transform: rotate(' + degHours + 'deg);')
 	}
 
 	setInterval(getTime, 1000)
@@ -97,13 +96,65 @@ observer
 
 clock()
 
-var take_snapshot = function() {
-  Webcam.attach('#js-webcamCamera')
-
-  Webcam.snap(function(data_uri) {
-    document.getElementById('js-webcamResult').innerHTML = '<img src="' + data_uri + '" />'
-  })
-}
+// Record Cover
 
 var shutterButton = document.getElementById('js-webcamShutter')
-shutterButton.addEventListener('click', take_snapshot, false)
+var shutterRetake = document.getElementById('js-webcamRetake')
+
+var cameraCancel = function () {
+  Webcam.unfreeze()
+  shutterRetake.classList.add('is-hidden')
+  cameraReady(cameraSave)
+}
+
+var cameraSave = function () {
+  Webcam.snap(function (data_uri) {
+    document.getElementById('js-webcamResult').innerHTML = '<img src="' + data_uri + '" />'
+  })
+
+  // Then do sharing stuff
+
+
+  // Put buttons back to default
+  cameraReady(cameraSave)
+
+}
+
+var cameraPreview = function () {
+  console.log('camera preview')
+  Webcam.freeze()
+
+  shutterButton.removeEventListener('click', cameraPreview, false)
+  shutterButton.innerHTML = 'Share cover'
+  shutterButton.addEventListener('click', cameraSave, false)
+  // Un-hide re-take option
+  shutterRetake.classList.remove('is-hidden')
+}
+
+
+var cameraReady = function (cameraUnset) {
+  console.log('camera ready')
+  shutterButton.innerHTML = 'Take photo'
+  shutterButton.removeEventListener('click', cameraUnset, false)
+  shutterButton.addEventListener('click', cameraPreview, false)
+}
+
+var cameraInit = function () {
+  var self = this
+  console.log('init camera')
+
+  Webcam.set({
+    width: 1280,
+    // height: 640,
+    // dest_width: 1280,
+    // dest_height: 1280,
+    flip_horiz: true,
+    fps: 45
+  })
+
+  Webcam.attach('#js-webcamCamera')
+  cameraReady(cameraInit)
+}
+
+shutterButton.addEventListener('click', cameraInit, false)
+shutterRetake.addEventListener('click', cameraCancel, false)
