@@ -1,9 +1,10 @@
 require('fontfaceobserver')
-var Webcam = require('webcamjs')
 var Editable = require('contenteditable')
-// var html2canvas = require('../../node_modules/html2canvas/dist/html2canvas.min.js')
 var contentEditable = document.querySelectorAll('[contenteditable]')
 var nodes = document.querySelectorAll('.js-scaleText')
+var record = require('./record.es')
+var clock = require('./clock.es')
+var hasClass = require('./hasClass.es')
 
 var scaleText = function (nodes) {
   bigIdeasText(nodes, { maxfontsize: 250, minfontsize: 30 })
@@ -43,47 +44,6 @@ var editablePaste = function (e) {
   }
 }
 
-var hasClass = function (el, className) {
-  if (el.classList) {
-    return el.classList.contains(className)
-  } else {
-    return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className)
-  }
-}
-
-// Inspired by http://codepen.io/m412c0/pen/bFafi
-var clock = function () {
-  var clockContainer = document.getElementById('js-clock')
-	var clockSeconds = document.getElementById('js-clockS')
-	var clockMinutes = document.getElementById('js-clockM')
-	var clockHours = document.getElementById('js-clockH')
-
-	function getTime() {
-
-		var date = new Date()
-		var seconds = date.getSeconds()
-		var minutes = date.getMinutes()
-		var hours = date.getHours()
-
-		var degSeconds = seconds * 360 / 60
-		var degMinutes = (minutes + seconds / 60) * 360 / 60
-		var degHours = (hours + minutes / 60 + seconds / 60 / 60) * 360 / 12
-
-    if ((hours >= 23 || hours <= 4) && typeof clockContainer.classList !== 'undefined') {
-      clockContainer.parentNode.parentNode.classList.add('knockout', 'knockout--purple')
-    } else {
-      clockContainer.parentNode.parentNode.classList.remove('knockout', 'knockout--purple')
-    }
-
-		clockSeconds.setAttribute('style', '-webkit-transform: rotate(' + degSeconds + 'deg); -moz-transform: rotate(' + degSeconds + 'deg); -ms-transform: rotate(' + degSeconds + 'deg); transform: rotate(' + degSeconds + 'deg);')
-		clockMinutes.setAttribute('style', '-webkit-transform: rotate(' + degMinutes + 'deg); -moz-transform: rotate(' + degMinutes + 'deg); -ms-transform: rotate(' + degMinutes + 'deg); transform: rotate(' + degMinutes + 'deg);')
-		clockHours.setAttribute('style', '-webkit-transform: rotate(' + degHours + 'deg); -moz-transform: rotate(' + degHours + 'deg); -ms-transform: rotate(' + degHours + 'deg); transform: rotate(' + degHours + 'deg);')
-	}
-
-	setInterval(getTime, 1000)
-	getTime()
-}
-
 var observer = new FontFaceObserver('Moriston')
 
 observer
@@ -92,77 +52,9 @@ observer
     console.log('Moriston is available!')
     scaleText(nodes)
     editableInit()
+    record()
   }, function () {
     console.log('Moriston is not available')
   })
 
 clock()
-
-// Record Cover
-
-var shutterButton = document.getElementById('js-webcamShutter')
-var shutterRetake = document.getElementById('js-webcamRetake')
-var webcamCamera = document.getElementById('js-webcamCamera')
-var renderFrame = document.getElementById('js-renderFrame')
-var renderResult = document.getElementById('js-renderResult')
-
-var cameraCancel = function () {
-  Webcam.unfreeze()
-  shutterRetake.classList.add('is-hidden')
-  cameraReady(cameraSave)
-}
-
-var cameraSave = function () {
-  console.log('ready to save!')
-
-  var canvas = webcamCamera.querySelector('canvas')
-  console.log(html2canvas)
-
-  html2canvas(renderFrame).then(function(canvas) {
-    console.log('render')
-    var img = document.createElement('img')
-    img.setAttribute('src', canvas.toDataURL("image/png"))
-    renderResult.appendChild(img)
-
-    // Then do sharing stuff
-
-    // Put buttons back to default
-    cameraReady(cameraSave)
-  })
-}
-
-var cameraPreview = function () {
-  console.log('camera preview')
-  Webcam.freeze()
-
-  shutterRetake.classList.remove('is-hidden')
-  shutterButton.innerHTML = 'Share cover'
-  shutterButton.removeEventListener('click', cameraPreview, false)
-  shutterButton.addEventListener('click', cameraSave, false)
-}
-
-
-var cameraReady = function (cameraUnset) {
-  console.log('camera ready')
-  shutterButton.innerHTML = 'Take photo'
-  shutterButton.removeEventListener('click', cameraUnset, false)
-  shutterButton.addEventListener('click', cameraPreview, false)
-}
-
-var cameraInit = function () {
-  var self = this
-  console.log('init camera')
-
-  Webcam.set({
-    width: 480,
-    height: 320,
-    // flip_horiz: true, // Doing this manually in CSS
-    fps: 20
-  })
-
-  Webcam.attach('#js-webcamCamera')
-  cameraReady(cameraInit)
-}
-
-shutterButton.addEventListener('click', cameraInit, false)
-shutterRetake.addEventListener('click', cameraCancel, false)
