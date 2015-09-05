@@ -3,15 +3,15 @@
   flex: 1;
   background: lighten($black, 10%);
   overflow: hidden;
-  height: 480px;
-  width: 480px;
+  height: 640px;
+  width: 640px;
   line-height: 1;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
   margin-bottom: 2em;
 }
 
 .record-image {
-  width: 100%;
+  min-width: 100%;
   left: -75%;
   position: relative;
   background: $blue;
@@ -33,7 +33,7 @@
   display: block;
   position: relative;
   z-index: 1;
-  background-color: rgba($black, 0.75);
+  background-color: rgba($purple, 0.75);
   // filter: blur(10px);
   span {
     line-height: 1;
