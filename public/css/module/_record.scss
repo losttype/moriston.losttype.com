@@ -1,0 +1,44 @@
+.record {
+  display: flex;
+  flex: 1;
+  background: lighten($black, 10%);
+  overflow: hidden;
+  height: 480px;
+  width: 480px;
+  line-height: 1;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+  margin-bottom: 2em;
+}
+
+.record-image {
+  width: 100%;
+  left: -75%;
+  position: relative;
+  background: $blue;
+  video {
+    filter: #{ "grayscale()" } saturate(100%) hue-rotate(180);
+  }
+}
+
+.record-preview {
+  z-index: 2;
+  position: relative;
+  display: block;
+}
+
+.record-layout {
+  padding: 1em;
+  width: 50%;
+  float: left;
+  display: block;
+  position: relative;
+  z-index: 1;
+  background-color: rgba($black, 0.75);
+  // filter: blur(10px);
+  span {
+    line-height: 1;
+  }
+  .bigIdeasText-exempt {
+    line-height: $base-line-height;
+  }
+}

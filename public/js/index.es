@@ -96,3 +96,14 @@ observer
   })
 
 clock()
+
+var take_snapshot = function() {
+  Webcam.attach('#js-webcamCamera')
+
+  Webcam.snap(function(data_uri) {
+    document.getElementById('js-webcamResult').innerHTML = '<img src="' + data_uri + '" />'
+  })
+}
+
+var shutterButton = document.getElementById('js-webcamShutter')
+shutterButton.addEventListener('click', take_snapshot, false)
