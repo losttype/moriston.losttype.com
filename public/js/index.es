@@ -108,9 +108,9 @@ var cameraCancel = function () {
 }
 
 var cameraSave = function () {
-  Webcam.snap(function (data_uri) {
-    document.getElementById('js-webcamResult').innerHTML = '<img src="' + data_uri + '" />'
-  })
+  // Webcam.snap(function (data_uri) {
+  //   document.getElementById('js-webcamResult').innerHTML = '<img src="' + data_uri + '" />'
+  // })
 
   // Then do sharing stuff
 
@@ -144,12 +144,12 @@ var cameraInit = function () {
   console.log('init camera')
 
   Webcam.set({
-    width: 1280,
-    // height: 640,
-    // dest_width: 1280,
-    // dest_height: 1280,
-    flip_horiz: true,
-    fps: 45
+    width: 480,
+    height: 320,
+    // dest_width: 480,
+    // dest_height: 320,
+    // flip_horiz: true,
+    fps: 20
   })
 
   Webcam.attach('#js-webcamCamera')

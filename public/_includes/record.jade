@@ -1,16 +1,16 @@
 != partial('./record-filter.ejs')
 
-.record
-  .record-layout
-    .simpleTester.js-scaleText(contenteditable spellcheck="false")
-      span.u-fontWeight--900 Jazz
-      span.u-fontWeight--900 Music
-      span.bigIdeasText-exempt Lost Type Co-op
-      span.bigIdeasText-exempt moriston.losttype.com
-  .record-image
-    #js-webcamCamera(style="width:960px; height:720px;")
-
-#js-webcamResult
+.record-container
+  .record
+    .record-cover
+      .record-image#js-webcamCamera
+    .record-layout
+      .simpleTester.js-scaleText(contenteditable spellcheck="false")
+        span.u-fontWeight--900 Jazz
+        span.u-fontWeight--900 Music
+      .simpleTester.js-scaleText(contenteditable spellcheck="false")
+        span.bigIdeasText-exempt Lost Type Co-op Records
+      span.record-watermark moriston.losttype.com
 
 #js-takeButtonsPre
   button.button.button--large#js-webcamShutter Add your face

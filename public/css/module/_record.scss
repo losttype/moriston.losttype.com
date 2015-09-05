@@ -1,22 +1,44 @@
+.record-container {
+  padding-bottom: 100%;
+  position: relative;
+  @media (min-width: $media-mid) {
+    padding-bottom: 75%;
+    width: 75%;
+  }
+}
+
 .record {
   display: flex;
-  flex: 1;
-  background: lighten($black, 10%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background: black; // Intentionally solid black
   overflow: hidden;
-  height: 640px;
-  width: 640px;
   line-height: 1;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0.25em 2em rgba(0, 0, 0, 0.25);
   margin-bottom: 2em;
 }
 
 .record-image {
-  min-width: 100%;
-  left: -75%;
-  position: relative;
+  transform: scale(2) scaleX(-1) !important;
+  transform-origin: top center;
   canvas {
-    filter: saturate(100%) #{ "grayscale(50%)" } hue-rotate(205deg);
+    outline: 1px solid orange;
+    filter: sepia() saturate(333%) hue-rotate(170deg); // http://stackoverflow.com/a/25524145/864799
     background: $blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+  }
+  video {
+    outline: 1px solid yellow;
+    // transform-origin: -50% 0 0 !important;
+    // height: auto !important;
+    width: auto !important;
   }
 }
 
@@ -28,10 +50,13 @@
 
 .record-layout {
   padding: 1em;
-  width: 50%;
+  width: 33%;
   float: left;
   display: block;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
   z-index: 1;
   background-color: rgba($purple, 0.75);
   // filter: blur(10px);
