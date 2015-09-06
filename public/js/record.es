@@ -22,7 +22,7 @@ module.exports = function() {
 
       var img = document.createElement('img')
       img.setAttribute('src', canvas.toDataURL("image/png"))
-      document.body.appendChild(img)
+      renderResult.appendChild(img)
 
       // Then do sharing stuff
 
