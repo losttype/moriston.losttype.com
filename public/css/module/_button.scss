@@ -16,7 +16,6 @@ input[type="submit"],
 .button,
 a.button {
   @include button;
-  padding: 0.7em 2.5em 0.8em 2.5em;
   width: 100%;
   display: block;
   text-decoration: none;
@@ -25,6 +24,11 @@ a.button {
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
+  padding: 0.7em 0 0.8em 0;
+  @media (min-width: $media-mid) {
+    padding-right: 2.5em;
+    padding-left: 2.5em;
+  }
 
   &:focus {
     outline: none;
@@ -33,8 +37,10 @@ a.button {
 
 .button--large,
 a.button--large {
-  padding: 1em 4em;
-  @media (min-width: 35em) {
+  padding: 1.5em 0 1.5em 0;
+  @media (min-width: $media-mid) {
+    padding-right: 2.5em;
+    padding-left: 2.5em;
     width: auto;
     max-width: auto;
     padding-left: 4em;
@@ -82,7 +88,7 @@ a.button--large {
   &.button--primary {
     color: $red;
   }
-  @media (min-width: 35em) {
+  @media (min-width: $media-mid) {
     display: inline-block;
     text-align: left;
     input + & {
