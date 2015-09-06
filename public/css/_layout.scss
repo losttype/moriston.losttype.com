@@ -112,3 +112,25 @@
 //   position: fixed;
 // }
 //
+
+// Section captions
+.section-caption {
+  margin-bottom: $base-line-height * 1em;
+  @media (min-width: $media-wide) {
+    margin-bottom: 0;
+    position: relative;
+    top: 0;
+    right: -100%;
+    max-width: 33%;
+    font-size: 0.75em;
+    height: 0;
+    padding-top: 1em;
+
+    // This will have to be based on knockouts or inherited
+    border-top: 1px solid $purple-dark;
+    color: mix($purple, white, 33%);
+  }
+  strong {
+    font-weight: 600;
+  }
+}
