@@ -1,19 +1,31 @@
-!= partial('./record-filter.ejs')
-
-.record-container#js-renderFrame
-  .record
-    .record-cover
-      .record-image#js-webcamCamera
-    .record-layout
-      .simpleTester.js-scaleText(contenteditable spellcheck="false")
-        span.u-fontWeight--900 Jazz
-        span.u-fontWeight--900 Music
-      .simpleTester.js-scaleText(contenteditable spellcheck="false")
-        span.bigIdeasText-exempt Lost Type Co-op Records
-      span.record-watermark moriston.losttype.com
-
 #js-renderResult
 
+.record-section
+  .record-container#js-renderFrame
+    .record
+      .record-cover
+        .record-image#js-webcamCamera
+      .record-layout
+        .simpleTester.js-scaleText(contenteditable spellcheck="false")
+          span.u-fontWeight--900 Jazz
+          span.u-fontWeight--900 Music
+        .simpleTester.js-scaleText(contenteditable spellcheck="false")
+          span.bigIdeasText-exempt Lost Type Co-op Records
+        span.record-watermark moriston.losttype.com
+    .record-vinyl
+      //- Make this text the same as what they typed in the cover?
+      .record-label
+        .js-scaleText
+          span.u-fontWeight--300.u-textTransform--uppercase Moriston
+          span.u-fontWeight--900 Moriston
+          span.u-fontWeight--300.u-textTransform--uppercase Moriston
+          span.u-fontWeight--900 Moriston
+          span.u-fontWeight--300.u-textTransform--uppercase Moriston
+          span.u-fontWeight--900 Moriston
+        
+.record-shelf.box
+  .box-top
+  .box-front
 
 #js-takeButtonsPre
   button.button.button--large#js-webcamShutter Add your face

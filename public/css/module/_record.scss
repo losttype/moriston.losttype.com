@@ -1,3 +1,8 @@
+.record-section {
+  position: relative;
+  padding: 0 3em;
+}
+
 .record-container {
   padding-bottom: 100%;
   position: relative;
@@ -5,8 +10,15 @@
     padding-bottom: 75%;
     width: 75%;
   }
+  &:hover {
+    .record-vinyl {
+      transform: translateX(9em);
+    }
+  }
+
 }
 
+.record-vinyl,
 .record {
   display: flex;
   position: absolute;
@@ -14,12 +26,72 @@
   right: 0;
   bottom: 0;
   left: 0;
+}
 
+.record {
   background: black; // Intentionally solid black
   overflow: hidden;
   line-height: 1;
-  box-shadow: 0 0.25em 2em rgba(0, 0, 0, 0.25);
-  margin-bottom: 2em;
+  box-shadow: 0 0 2em rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+.record-watermark {
+  position: absolute;
+  z-index: 3;
+  top: 80%;
+  padding: 1.25rem 1rem; // Sould be the same as padding inside editble area
+  left: 0;
+  font-size: 0.75em;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: $purple;
+  color: #FFF;
+}
+
+.record-vinyl {
+  border-radius: 50%;
+  background-color: #333;
+  transform: translateX(0);
+  transition: transform 1s ease-in-out; // Don’t make Ben cry
+  z-index: 1;
+  .is-preview & {
+    transform: translateX(11em);
+    &:hover {
+      transform: translateX(14em);
+      transition-duration: 0.5s;
+    }
+  }
+}
+
+.record-label {
+  position: relative;
+  z-index: 1;
+  background-color: $purple-light;
+  border-radius: 50%;
+  width: 12rem;
+  height: 12rem;
+  margin: auto;
+  overflow: hidden;
+  span {
+    user-select: none;
+    line-height: 1.1;
+    &:first-child {
+      margin-top: -1rem;
+    }
+  }
+  &:before {
+    content: "";
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background-color: #000;
+    z-index: 1;
+    position: relative;
+    top: calc(50% - 0.5rem);
+    margin: auto;
+    border-radius: 50%;
+  }
 }
 
 .record-result {
@@ -51,6 +123,7 @@
   z-index: 2;
   position: relative;
   display: block;
+
 }
 
 .record-layout {
@@ -70,5 +143,44 @@
   }
   .bigIdeasText-exempt {
     line-height: $base-line-height;
+  }
+}
+
+// Shelf
+
+.record-shelf,
+.record-shelf.box {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  perspective: 300;
+  transform: translate(0, -3rem) rotateY(0) rotateX(-20deg);
+  .box-front,
+  .box-top {
+    width: 125%;
+    margin-left: -12.5%;
+    background-color: $purple-light;
+    border-top: 1px solid $purple-light;
+  }
+  .box-front {
+    height: 3rem;
+    position: absolute;
+    top: 3rem;
+  }
+  .box-top {
+    height: 6rem;
+    transform: translate(0) rotateX(90deg);
+    background-color: darken($purple-light, 2%);
+    &:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: rgba($purple, 0.5);
+      filter: blur(2rem);
+      // border-radius: 33%;
+      // box-shadow: 0 0 100px pink;
+      display: block;
+      transform: scale(0.75, 0.5) translateY(-25px);
+    }
   }
 }
