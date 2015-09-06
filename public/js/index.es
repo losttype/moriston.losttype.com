@@ -52,9 +52,9 @@ observer
     console.log('Moriston is available!')
     scaleText(nodes)
     editableInit()
-    record()
   }, function () {
     console.log('Moriston is not available')
   })
 
+record()
 clock()

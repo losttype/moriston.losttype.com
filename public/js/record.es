@@ -19,9 +19,10 @@ module.exports = function() {
     var canvas = webcamCamera.querySelector('canvas')
 
     html2canvas(renderFrame).then(function(canvas) {
+
       var img = document.createElement('img')
       img.setAttribute('src', canvas.toDataURL("image/png"))
-      renderResult.appendChild(img)
+      document.body.appendChild(img)
 
       // Then do sharing stuff
 
