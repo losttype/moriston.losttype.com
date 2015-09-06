@@ -34,6 +34,7 @@ module.exports = function() {
     Webcam.freeze()
 
     shutterRetake.classList.remove('is-hidden')
+    renderFrame.classList.add('is-preview')
     shutterButton.innerHTML = 'Share cover'
     shutterButton.removeEventListener('click', cameraPreview, false)
     shutterButton.addEventListener('click', cameraSave, false)
@@ -42,6 +43,9 @@ module.exports = function() {
 
   var cameraReady = function (cameraUnset) {
     shutterButton.innerHTML = 'Take photo'
+    shutterRetake.classList.add('is-hidden')
+    shutterRetake.classList.remove('is-preview')
+
     shutterButton.removeEventListener('click', cameraUnset, false)
     shutterButton.addEventListener('click', cameraPreview, false)
   }
