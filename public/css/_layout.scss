@@ -135,3 +135,34 @@
     font-weight: 600;
   }
 }
+
+
+// Tachyon Widths
+//
+// Test, MIT via https://github.com/mrmrs/tachyons/blob/master/css/tachyons.css
+//
+// No styleguide reference.
+
+.mw-100,
+.mw-75,
+.mw-50,
+.mw-25 {
+  float: left;
+  display: inline;
+}
+
+.mw-100 {
+  max-width: 100%;
+}
+
+.mw-75 {
+  max-width: 75%;
+}
+
+.mw-50 {
+  max-width: 50%;
+}
+
+.mw-25 {
+  max-width: 25%;
+}
