@@ -8,12 +8,18 @@ html {
 
 body {
   font-size: 1.25em;
-  line-height: 1.38;
+  line-height: $base-line-height;
   letter-spacing: 0.01em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, [contenteditable] {
   letter-spacing: 0;
+}
+
+sub, sup { // TODO check if this is right once sub, sup OT code is written
+  font-size: inherit;
+  top: 0;
+  line-height: inherit;
 }
 
 [contenteditable] {
@@ -43,6 +49,18 @@ h1, h2, h3, h4, h5, h6 {
   img {
     display: none;
     visibility: hidden;
+  }
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 3em;
+  margin: 1rem * $base-line-height 0;
+  line-height: 1.2;
+  margin: 0.5em 0;
+  @media (min-width: $media-wide) {
+    font-size: 4.25em;
+    line-height: 1.125;
   }
 }
 
@@ -79,4 +97,127 @@ h1, h2, h3, h4, h5, h6 {
 
 .knockout--crop {
   overflow-x: hidden;
+}
+
+// Since we don’t have italics yet!
+em, i, cite {
+  font-style: normal;
+  &:before {
+    content: '\201C';
+  }
+  &:after {
+    content: '\201D';
+  }
+}
+
+.story {
+  font-size: $font-size-small;
+  line-height: 1.525;
+  padding: (3em * $base-line-height) ($gutter / 2);
+  @media (min-width: $media-wide) {
+    // font-size: 1.25rem;
+    font-size: inherit;
+    line-height: $base-line-height;
+    padding-left: 0;
+    padding-right: 0;
+    p:first-of-type {
+      font-size: 1.5rem;
+    }
+  }
+  // This is a (kind of dumb) way
+  // to avoid needing markup between
+  // figures and content in the
+  // story section, so it is easier
+  // for Riley to edit.
+  p, ul, ol, blockquote,
+  h1, h2, h3, h4, h5, h6,
+  iframe {
+    max-width: 35rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5 * 0.5em;
+    @media (min-width: $media-wide) {
+      max-width: $max-width;
+    }
+  }
+}
+
+// Figure
+//
+// Long-from story figures and captions
+//
+// No styleguide reference.
+figure {
+  max-width: 100%;
+  margin: 1.252 * 1em 0;
+  img {
+    width: 100%;
+  }
+  @media (min-width: $media-wide) {
+    margin-top: $base-line-height * 2em;
+    margin-bottom: $base-line-height * 2em;
+    background-color: $gray-lighter;
+    padding: $gutter;
+  }
+  @media (min-width: $media-huge) {
+    padding: ($gutter * 2) ($base-line-height * 2em);
+    & > img {
+      display: block;
+      width: auto;
+      max-width: 120%;
+      margin: 0 auto;
+    }
+  }
+}
+
+figcaption {
+  max-width: 35rem;
+  color: $gray;
+  margin: 0 auto;
+  padding-top: $base-line-height * 1em;
+  clear: both;
+  @media (min-width: $media-wide) {
+    max-width: $max-width;
+    font-size: $font-size-small;
+    line-height: 1.525;
+    margin: 0 auto;
+    padding-top: 1.525 * 1em;
+    // margin-left: 0;
+    // margin-right: auto;
+  }
+  @media (min-width: $media-huge) {
+    font-size: inherit;
+    line-height: $base-line-height;
+    width: $max-width * 0.666;
+    font-weight: 400;
+    margin-left: $max-width * 0.333;
+    margin-right: auto;
+  }
+}
+
+// Anchors
+//
+// No styleguide reference.
+a,
+a:visited {
+  color: $blue;
+  text-decoration: none;
+  border-bottom: 0.0625rem solid $blue-lighter;
+  transition: color 0.15s ease-in, border-color 0.15s ease-in;
+  &:hover,
+  &:focus {
+    color: $blue; // Explicit for captions
+    border-color: $blue;
+  }
+  &:active {
+    color: $blue-dark;
+  }
+}
+
+figcaption {
+  a,
+  a:visited {
+    color: $gray;
+    border-color: $gray-light;
+  }
 }

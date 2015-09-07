@@ -1,5 +1,5 @@
 .container {
-  max-width: 50rem;
+  max-width: $max-width;
   margin-left: auto;
   margin-right: auto;
   padding: 1em;
@@ -116,8 +116,9 @@
 // Section captions
 .section-caption {
   margin-bottom: $base-line-height * 1em;
+  // margin-top: $base-line-height * -1em;
   @media (min-width: $media-wide) {
-    margin-bottom: 0;
+    margin-bottom: -1em;
     position: relative;
     top: 0;
     right: -100%;
@@ -133,4 +134,35 @@
   strong {
     font-weight: 600;
   }
+}
+
+
+// Tachyon Widths
+//
+// Test, MIT via https://github.com/mrmrs/tachyons/blob/master/css/tachyons.css
+//
+// No styleguide reference.
+
+.mw-100,
+.mw-75,
+.mw-50,
+.mw-25 {
+  float: left;
+  display: inline;
+}
+
+.mw-100 {
+  max-width: 100%;
+}
+
+.mw-75 {
+  max-width: 75%;
+}
+
+.mw-50 {
+  max-width: 50%;
+}
+
+.mw-25 {
+  max-width: 25%;
 }
