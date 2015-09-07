@@ -12,8 +12,14 @@ body {
   letter-spacing: 0.01em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, [contenteditable] {
   letter-spacing: 0;
+}
+
+sub, sup { // TODO check if this is right once sub, sup OT code is written
+  font-size: inherit;
+  top: 0;
+  line-height: inherit;
 }
 
 [contenteditable] {
@@ -46,6 +52,15 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+h1 {
+  font-weight: 900;
+  font-size: 3em;
+  margin: 1rem * $base-line-height 0;
+  line-height: 1.2;
+  margin: 0.5em 0;
+  @media (min-width: $media-wide) {
+    font-size: 4.25em;
+    line-height: 1.125;
   }
 }
 
