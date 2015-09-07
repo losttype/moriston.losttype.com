@@ -16,6 +16,7 @@
   margin: 6em auto;
   user-select: none;
   position: relative;
+  color: $gray-dark;
 }
 
 .clock-center,
@@ -25,7 +26,7 @@
 	left: 50%;
 	position: absolute;
 	top: 50%;
-  background-color: $black;
+  background-color: $gray-dark;
 }
 
 .knockout {
