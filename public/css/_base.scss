@@ -46,6 +46,9 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+  }
+}
+
 .h1--temp {
   font-weight: 500;
   color: $red;
@@ -79,4 +82,47 @@ h1, h2, h3, h4, h5, h6 {
 
 .knockout--crop {
   overflow-x: hidden;
+}
+
+// Since we don’t have italics yet!
+em, i, cite {
+  font-style: normal;
+  &:before {
+    content: '\201C';
+  }
+  &:after {
+    content: '\201D';
+  }
+}
+
+.story {
+  font-size: $font-size-small;
+  line-height: 1.525;
+  padding: (3em * $base-line-height) ($gutter / 2);
+  @media (min-width: $media-wide) {
+    // font-size: 1.25rem;
+    font-size: inherit;
+    line-height: $base-line-height;
+    padding-left: 0;
+    padding-right: 0;
+    p:first-of-type {
+      font-size: 1.5rem;
+    }
+  }
+  // This is a (kind of dumb) way
+  // to avoid needing markup between
+  // figures and content in the
+  // story section, so it is easier
+  // for Riley to edit.
+  p, ul, ol, blockquote,
+  h1, h2, h3, h4, h5, h6,
+  iframe {
+    max-width: 35rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5 * 0.5em;
+    @media (min-width: $media-wide) {
+      max-width: $max-width;
+    }
+  }
 }
