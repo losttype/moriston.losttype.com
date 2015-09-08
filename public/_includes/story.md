@@ -10,7 +10,9 @@ It occurred to me that, if you stripped away the idiosyncratic round-top _A_, an
 
 <figure>
 ![](http://blog.losttype.com/media/2013/10/12.jpg)
-<figcaption>Image that helps clarify what it means to have something similar to the Benton Gothics.</figcaption>
+<figcaption>
+  <p>Image that helps clarify what it means to have something similar to the Benton Gothics.</p>
+</figcaption>
 </figure>
 
 What would happen if an entire family was built this way? An early 20<sup>th</sup> century grotesque, shifted into new territory through noticeable higher contrast? Could the increased contrast modify the aesthetic tone without sacrificing legibility, or feeling forced?
@@ -28,7 +30,8 @@ These questions lingered as I first started drawing Moriston on that first trip 
 <div class="mw-50">
 ![](/media/lubalin-newyork-2.jpg)
 </div>
-<figcaption>When we arrived at Lubalin Center, Sasha had already pulled a few dozen pieces for us. Pictured here, Sasha shows off an original Alvin Lustig catalog design, and leafs from Massimo Vignelli’s [Unimark New York Subway Style guide](http://thestandardsmanual.com).</figcaption>
+<figcaption class="mwl-50">
+  <p>When we arrived at Lubalin Center, Sasha had already pulled a few dozen pieces for us. Pictured here, Sasha shows off an original Alvin Lustig catalog design, and leafs from Massimo Vignelli’s [Unimark New York Subway Style guide](http://thestandardsmanual.com).</p></figcaption>
 </figure>
 
 ## Moriston visits Vancouver
@@ -37,14 +40,16 @@ Early on in the process I brought some proofs to a lunch with [Ross Milne](https
 
 Typically, contrast necessarily increases in bolder weights of a typeface; this is a mechanism to open space in the counterforms.  The early proofs that I showed Ross were stuck between using this feature as a tool, and using it as an aesthetic quality. He pushed me to accentuate that higher contrast … and take it past functionality and into confident aesthetic decision making. Once this quality was pushed in the black weight (which at this point was being designed on its own as an exploration) it really began to sing in a way I was pleased with. It was striking and felt more unique, and the qualities in the black began to call the shots for my mental image of the family.
 
-<!--
 <figure>
+<div class="mwl-75">
 ![](http://kennethormandy.com/media/riley-cran-moriston-interpolation-test.png)
-<figcaption><p>Here, Riley Cran is working on the extremes of a typeface: the boldest weight and the lightest weight are original master. This allows the in-between weights to be mathematically generated using interpolation.</p>
-<p>Interpolation is commonly used by type designers both as a sketching technique, and for generating the final weights of a typeface.</p>
-<footer>Riley Cran, <cite>Moriston interpolation tests</cite>, 2015.</footer></figcaption>
+</div>
+<figcaption class="mwl-25">
+  <p>Here, Riley Cran is working on the extremes of a typeface: the boldest weight and the lightest weight are original master. This allows the in-between weights to be mathematically generated using interpolation.</p>
+  <p>Interpolation is commonly used by type designers both as a sketching technique, and for generating the final weights of a typeface.</p>
+  <footer>Riley Cran, <cite>Moriston interpolation tests</cite>, 2015.</footer></figcaption>
 </figure>
--->
+
 At this point I began thinking about how this family could be expanded, and what lighter weights could look like. As I mentioned earlier, I saw the caps initially as being part of a benton gothic sort of structure (News Gothic, Franklin Gothic, etc.), but in the development of the black exploration I had made several decisions which were perhaps a bit cross-genre. They worked well in the black, but it required some thought as to how these qualities would effect the entire family. For instance the single story <em>a</em> had become one of the main aesthetic tone shifts for the black weight, and also a convenient way to avoid having to draw an ultra bold high contrast <em>a</em> which would have had a very different tone.
 
 I also was closing terminations very horizontally, which I realized gave the idea of lighter weights a more swiss feeling, closer to something like Univers which I hadn’t really considered as a potential influence until this time. The challenge at this point was to find a model of some kind that would allow me incorporate this higher contrast black into a functional family who’s various weights felt related and worked together.

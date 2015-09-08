@@ -166,3 +166,30 @@
 .mw-25 {
   max-width: 25%;
 }
+
+.mwl-100,
+.mwl-75,
+.mwl-50,
+.mwl-25 {
+  float: left;
+  display: inline;
+  clear: none;
+}
+
+@media (min-width: $media-mid) {
+  .mwl-100 {
+    max-width: 100%;
+  }
+
+  .mwl-75 {
+    max-width: 75%;
+  }
+
+  .mwl-50 {
+    max-width: 50%;
+  }
+
+  .mwl-25 {
+    max-width: 25%;
+  }
+}

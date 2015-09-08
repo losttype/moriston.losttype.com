@@ -22,6 +22,11 @@ sub, sup { // TODO check if this is right once sub, sup OT code is written
   line-height: inherit;
 }
 
+p {
+  margin-top: 0;
+  margin-bottom: $base-line-height * 1em;
+}
+
 [contenteditable] {
   -webkit-user-modify: read-write-plaintext-only;
   -moz-user-modify: read-write-plaintext-only;
@@ -120,7 +125,7 @@ em, i, cite {
     line-height: $base-line-height;
     padding-left: 0;
     padding-right: 0;
-    p:first-of-type {
+    & > p:first-of-type {
       font-size: 1.5rem;
     }
   }
@@ -148,15 +153,21 @@ em, i, cite {
 //
 // No styleguide reference.
 figure {
+  overflow: hidden;
   max-width: 100%;
   margin: 1.252 * 1em 0;
+  clear: both;
+  padding: $gutter / 2;
   img {
     width: 100%;
+    margin: 0;
+    display: block;
+    margin: 0 auto;
   }
   @media (min-width: $media-wide) {
+    background-color: $gray-lighter;
     margin-top: $base-line-height * 2em;
     margin-bottom: $base-line-height * 2em;
-    background-color: $gray-lighter;
     padding: $gutter;
   }
   @media (min-width: $media-huge) {
@@ -164,34 +175,32 @@ figure {
     & > img {
       display: block;
       width: auto;
-      max-width: 120%;
+      max-width: $max-width * 1.5;
+      // max-width: 120%;
       margin: 0 auto;
     }
   }
 }
 
 figcaption {
-  max-width: 35rem;
   color: $gray;
-  margin: 0 auto;
-  padding-top: $base-line-height * 1em;
-  clear: both;
+  padding: $gutter;
+  box-sizing: border-box;
+  background-color: $gray-lighter;
+
+  // margin: 0 auto;
+  // float: left;
+  clear: left;
   @media (min-width: $media-wide) {
-    max-width: $max-width;
+    background-color: transparent;
+    max-width: 100%;
+    float: none;
     font-size: $font-size-small;
     line-height: 1.525;
-    margin: 0 auto;
-    padding-top: 1.525 * 1em;
-    // margin-left: 0;
-    // margin-right: auto;
   }
   @media (min-width: $media-huge) {
     font-size: inherit;
     line-height: $base-line-height;
-    width: $max-width * 0.666;
-    font-weight: 400;
-    margin-left: $max-width * 0.333;
-    margin-right: auto;
   }
 }
 
