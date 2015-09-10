@@ -1,6 +1,6 @@
 # Introducing Moriston
 
-While waiting outside the Evolution store on Spring Street, between Greene and Mercer in Soho, I saw a 50’s _Rollfast_ bicycle leaning against a tree. Even amongst the building inscriptions, the historical archives I visited, the hand painted signs we tracked down, and the other pockets of inspiration native to New York, the spark for Moriston came from this otherwise pedestrian source.
+<p class="dropcap-container" data-dropcap="W"><span class="js-dropcap dropcap">W</span>hile waiting outside the Evolution store on Spring Street, between Greene and Mercer in Soho, I saw a 50’s _Rollfast_ bicycle leaning against a tree. Even amongst the building inscriptions, the historical archives I visited, the hand painted signs we tracked down, and the other pockets of inspiration native to New York, the spark for Moriston came from this otherwise pedestrian source.</p>
 
 The design of the bicycle itself was gorgeous. My companions and fellow Lost Type Co-op contributors agreed there was something special about the characterful _R_ monogram on the bike frame. Yet, it was the logotype that caught my eye.
 
