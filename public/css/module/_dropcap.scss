@@ -1,0 +1,38 @@
+// Dropcap
+//
+// A dropcap for a post. The markup is generated automatically, with the
+// span coming from a Handlebars helper, and the `line-height` alignment
+// and other features coming from [Dropcap.js](https://github.com/adobe-webplatform/dropcap.js).
+//
+// Markup:
+// <p class="dropcap-container" data-dropcap="A"><span class="js-dropcap dropcap">A</a>nd so the trip has
+// come to an end. I’m writing this from my apartment in San Francisco. I was one of the first to leave
+// this morning, while everyone was still sleeping off their hangover. It was a weird and sad feeling to
+// walk out that apartment, as this past week has been somewhat magical.</p>
+//
+// Styleguide: module.dropcap
+.dropcap {
+  text-transform: uppercase;
+  text-indent: 0;
+  font-family: $font-family-sans;
+  font-weight: 900;
+  margin-right: $base-line-height * 0.5rem;
+}
+
+.dropcap-container {
+  text-indent: -0.5rem;
+  &[data-dropcap="A"],
+  &[data-dropcap="L"],
+  &[data-dropcap="W"],
+  &[data-dropcap="V"] {
+    text-indent: -1rem;
+  }
+
+
+  // Temp
+  text-transform: lowercase;
+  .caps {
+    text-transform: lowercase !important;
+    font-feature-settings: normal;
+  }
+}

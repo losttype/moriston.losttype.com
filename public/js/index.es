@@ -2,9 +2,11 @@ require('fontfaceobserver')
 var Editable = require('contenteditable')
 var contentEditable = document.querySelectorAll('[contenteditable]')
 var nodes = document.querySelectorAll('.js-scaleText')
+var dropcap = require('dropcap.js')
 var record = require('./record.es')
 var clock = require('./clock.es')
 var hasClass = require('./hasClass.es')
+var elDropcap = document.querySelectorAll('.js-dropcap')
 
 var scaleText = function (nodes) {
   bigIdeasText(nodes, { maxfontsize: 250, minfontsize: 30 })
@@ -52,6 +54,7 @@ observer
     console.log('Moriston is available!')
     scaleText(nodes)
     editableInit()
+    window.Dropcap.layout(elDropcap, 3)
   }, function () {
     console.log('Moriston is not available')
   })
