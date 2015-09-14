@@ -2,6 +2,10 @@
 //
 // Styleguide: base
 
+// * {
+//   box-sizing: border-box;
+// }
+
 html {
   font-family: $base-font-family;
 }
@@ -10,6 +14,7 @@ body {
   font-size: 1.25em;
   line-height: $base-line-height;
   letter-spacing: 0.01em;
+  color: $black;
 }
 
 h1, h2, h3, h4, h5, h6, [contenteditable] {
@@ -28,10 +33,6 @@ p {
 }
 
 [contenteditable] {
-  -webkit-user-modify: read-write-plaintext-only;
-  -moz-user-modify: read-write-plaintext-only;
-  -ms-user-modify: read-write-plaintext-only;
-  user-modify: read-write-plaintext-only;
   outline-color: transparent;
   outline: none;
   word-wrap: break-word;
@@ -125,9 +126,6 @@ em, i, cite {
     line-height: $base-line-height;
     padding-left: 0;
     padding-right: 0;
-    & > p:first-of-type {
-      font-size: 1.5rem;
-    }
   }
   // This is a (kind of dumb) way
   // to avoid needing markup between
