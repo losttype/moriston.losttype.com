@@ -9,13 +9,20 @@
 .grid {
   display: flex;
   // max-width: 75rem;
-  margin: 0 auto;
+  margin: 0 $gutter;
 }
 
 .grid__cell {
   flex: 1;
   height: 5em;
   // height: 5em;
+}
+
+.grid--intro,
+.grid--intro .grid__cell {
+  height: 0em;
+  overflow: hidden;
+  border-bottom: 1em solid $red;
 }
 
 // Square
@@ -36,6 +43,7 @@
 }
 
 .square__content {
+  // margin-top: -33%;
   flex: 1;
   z-index: 1;
   opacity: 0.5;
@@ -60,8 +68,7 @@
     }
   }
 
-  // Temp
-  font-size: 20em;
+  font-size: 20em; // Temp
 
   &:nth-of-type(2n) {
     font-size: 40em;
@@ -87,10 +94,10 @@
     // mix-blend-mode: none !important;
   }
 
-  @media (min-width: 30em) {
+  @media (min-width: $media-mid) {
     font-size: 30em;
   }
-  @media (min-height: 30em) {
+  @media (min-height: $media-mid) {
     font-size: 30em;
   }
 
