@@ -6,14 +6,36 @@ html(lang="en-us")
     link(href="#{ environment !== 'development' ? 'http://fonts.kennethormandy.com' : '' }/css/moriston.css" rel="stylesheet")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
   body
-    .container
-      h1.h1--temp <strong>Moriston.</strong> A typeface by Riley Cran.
+    .grid.grid--intro
+      .grid__cell.square
+        .square__content.square__content--centered.u-fontWeight--700 M
+        .square__content.square__content--centered.u-fontWeight--300 o
 
-      p Riley Cran is a designer based in the Pacific Northwest with a specialty in Identity, Packaging and Illustration. 
-      p Aspiring to create characterful and functional work, Riley merges historical influences with modern, contemporary solutions that are relevant in 2014. 
-      p Do you need something designed?
-      
-      a.button.button--large(href="http://losttype.com/font/?name=moriston") Buy it right now!
+      .grid__cell.square
+        .square__content.square__content--centered.u-fontWeight--400 R
+        .square__content.square__content--centered.u-fontWeight--700 i
+
+      .grid__cell.square.overlay
+        .square__content.square__content--centered.u-fontWeight--900 S
+        .square__content.square__content--centered.u-fontWeight--900 t
+
+      .grid__cell.square
+        .square__content.square__content--centered.u-fontWeight--400 o
+        .square__content.square__content--centered.u-fontWeight--400 N
+
+    .story
+      .container
+        h1.h1--temp <strong>Moriston.</strong> What do you use to tell your story?
+
+        p.story-lead Graphic designers have increasingly turned to practical, grotesque, sans serif type families since the mid-20<sup>th</sup> century.
+        p Moriston delivers accountability, with abnormally high contrast—and in turn, uncharacteristically high enthusiasm. Available in 6 reliable weights, with support for over 30 languages, from your friends at The Lost Type Co-op.
+
+        .story-alphabet
+          | abcdefghijklmnopqrstuvwxyz
+          | ABCDEFGHIJKLMNOPQRSTUVWXYZ
+          div And more…
+
+        a.button.button--large(href="http://losttype.com/font/?name=moriston") Buy it right now!
 
     .grid
       .grid__cell.square
@@ -73,21 +95,23 @@ html(lang="en-us")
     .knockout
       .container
         div(contenteditable spellcheck="false" autofocus).simpleTester.u-fontWeight--300.js-scaleText
-          span San Francisco
-        div(contenteditable spellcheck="false").simpleTester.js-scaleText
-          span.u-fontWeight--400 New York
-        div(contenteditable spellcheck="false").simpleTester.js-scaleText
-          span.u-fontWeight--500 Amsterdam
-        div(contenteditable spellcheck="false").simpleTester.js-scaleText
+          span A Rollfast bicycle
+          span.u-fontWeight--400 Airplane travels
+          span.u-fontWeight--500 Scottish River Glens
+        div(contenteditable spellcheck="false").simpleTester.simpleTester--scale.js-scaleText
           span.u-fontWeight--300 Four of this year’s attendees are from the Pacific Northwest, and three of us were lucky enough to have met up a little early. Riley and I caught a cab together in at 4:45AM—maybe we’ve stayed up to that hour before, talking about type and writing code, but this is probably the first time we’ve met up that early.
         div(contenteditable spellcheck="false").simpleTester.js-scaleText
-          span.u-fontWeight--700 Chicago
-        div(contenteditable spellcheck="false").simpleTester.js-scaleText
-          span.u-fontWeight--900 Vancouver
+          span.u-fontWeight--700 Very good Jazz albums
+          span.u-fontWeight--900 New York
           
     .knockout.knockout--darkBlue#sugar
       .container#sugar
         include _includes/sugar
+
+    .shadow
+      .container#shadow
+        .simpleTester.js-scaleText.is-editable.shadow-text(contenteditable spellcheck="false" bigIdeasText-minfontsize="1" bigIdeasText-maxfontsize="1000")
+          span.u-fontWeight--900 Moriston
     
     .knockout.knockout--purple.knockout--crop
       .container#record
@@ -97,8 +121,9 @@ html(lang="en-us")
       //- include _includes/story.md
       .story!= partial("_includes/story")
 
-    script(src="https://rawgit.com/kennethormandy/big-ideas-text/master/dist/big-ideas-text.js")
-    script(src="https://rawgit.com/niklasvh/html2canvas/0.5.0-alpha2/dist/html2canvas.min.js")
+    script(src="/js/vendor/big-ideas-text.js")      
+    //- script(src="https://rawgit.com/kennethormandy/big-ideas-text/master/dist/big-ideas-text.js")
+    //- script(src="https://rawgit.com/niklasvh/html2canvas/0.5.0-alpha2/dist/html2canvas.min.js")
     script(src="/js/index.js")
-    script(src="https://rawgit.com/LeaVerou/prefixfree/gh-pages/prefixfree.min.js")
-    script(src="https://rawgit.com/LeaVerou/conic-gradient/gh-pages/conic-gradient.js")
+    //- script(src="https://rawgit.com/LeaVerou/prefixfree/gh-pages/prefixfree.min.js")
+    //- script(src="https://rawgit.com/LeaVerou/conic-gradient/gh-pages/conic-gradient.js")
