@@ -3,7 +3,7 @@ html(lang="en-us")
   head
     title Morison
     link(href="/css/index.css" rel="stylesheet")
-    link(href="http://fonts.kennethormandy.com/css/moriston.css" rel="stylesheet")
+    link(href="#{ environment !== 'development' ? 'http://fonts.kennethormandy.com' : '' }/css/moriston.css" rel="stylesheet")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
   body
     .container
