@@ -1,0 +1,60 @@
+// Shadow
+
+.shadow {
+  // min-height: 100em;
+  padding-top: $base-line-height * 2em;
+  padding-bottom: $base-line-height * 2em;
+  @media (min-height: $media-wide) {
+    padding-top: $base-line-height * 5em;
+    padding-bottom: $base-line-height * 5em;
+  }
+}
+
+.shadow-text {
+  color: $red;
+  text-shadow:
+  $black (1px * 1.44) (1px * 1),
+  $black (2px * 1.44) (2px * 1),
+  $black (3px * 1.44) (3px * 1),
+  $black (4px * 1.44) (4px * 1),
+  $black (5px * 1.44) (5px * 1),
+  $black (6px * 1.44) (6px * 1),
+  $black (7px * 1.44) (7px * 1),
+  $black (8px * 1.44) (8px * 1),
+  $black (9px * 1.44) (9px * 1),
+  $black (10px * 1.44) (10px * 1),
+  $black (11px * 1.44) (11px * 1),
+  $black (12px * 1.44) (12px * 1),
+  $black (13px * 1.44) (13px * 1),
+  $black (14px * 1.44) (14px * 1),
+  $black (15px * 1.44) (15px * 1),
+  $black (16px * 1.44) (16px * 1),
+  $black (17px * 1.44) (17px * 1),
+  $black (18px * 1.44) (18px * 1),
+  $black (19px * 1.44) (19px * 1),
+  $black (20px * 1.44) (20px * 1),
+  $black (21px * 1.44) (21px * 1),
+  $black (22px * 1.44) (22px * 1),
+  $black (23px * 1.44) (23px * 1),
+  $black (24px * 1.44) (24px * 1),
+  $black (25px * 1.44) (25px * 1),
+  $black (26px * 1.44) (26px * 1),
+  $black (27px * 1.44) (27px * 1),
+  $black (28px * 1.44) (28px * 1),
+  $black (29px * 1.44) (29px * 1),
+  $black (30px * 1.44) (30px * 1),
+  $black (31px * 1.44) (31px * 1),
+  $black (32px * 1.44) (32px * 1),
+  $black (33px * 1.44) (33px * 1),
+  $black (34px * 1.44) (34px * 1),
+  $black (35px * 1.44) (35px * 1),
+  $black (36px * 1.44) (36px * 1),
+  $black (37px * 1.44) (37px * 1),
+  $black (38px * 1.44) (38px * 1),
+  $black (39px * 1.44) (39px * 1),
+  $black (40px * 1.44) (40px * 1),
+  $black (41px * 1.44) (41px * 1),
+  $black (42px * 1.44) (42px * 1),
+  $black (43px * 1.44) (43px * 1),
+  $black (44px * 1.44) (44px * 1);
+}
