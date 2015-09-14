@@ -145,6 +145,20 @@ em, i, cite {
   }
 }
 
+.story > p:first-of-type,
+.story-lead {
+  font-size: 1.5rem;
+}
+
+// container breakout?
+
+.story-alphabet {
+  font-size: 3em;
+  text-align: center;
+  color: $red-light;
+  word-break: break-all;
+}
+
 // Figure
 //
 // Long-from story figures and captions
