@@ -126,26 +126,6 @@
 
 }
 
-.record-layout {
-  padding: 1em;
-  width: 33%;
-  float: left;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  z-index: 1;
-  background-color: rgba($purple, 0.75);
-  // filter: blur(10px);
-  span {
-    line-height: 1;
-  }
-  .bigIdeasText-exempt {
-    line-height: $base-line-height;
-  }
-}
-
 // Shelf
 
 .record-shelf,
@@ -181,6 +161,42 @@
       // box-shadow: 0 0 100px pink;
       display: block;
       transform: scale(0.75, 0.5) translateY(-25px);
+    }
+  }
+}
+
+
+// Theme
+
+.record--1 {
+  .record-layout {
+    // background-color: $beige;
+    // height: 33%;
+  }
+  .simpleTester {
+    width: 100%;
+    background-color: $beige;
+  }
+}
+
+.record--4 {
+  .record-layout {
+    padding: 1em;
+    width: 33%;
+    float: left;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba($purple, 0.75);
+    // filter: blur(10px);
+    span {
+      line-height: 1;
+    }
+    .bigIdeasText-exempt {
+      line-height: $base-line-height;
     }
   }
 }
