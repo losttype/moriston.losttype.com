@@ -27,7 +27,7 @@ What would happen if an entire family was built this way? An early 20<sup>th</su
 
 ## Glenmoriston
 
-Miller & Richards Grotesque №7 proved influential while working through this idea. Produced around the turn of the century, this was when the sans-serif came into its own. With ideas from Scottish type founders like Miller & Richards, American type founders like Morris Fuller Benton at ATF, and other foundries producing designs that influenced each other and travel across the globe.
+Miller & Richards Grotesque #7 proved influential while working through this idea. Produced around the turn of the century, this was when the sans-serif came into its own. With ideas from Scottish type founders like Miller & Richards, American type founders like Morris Fuller Benton at ATF, and other foundries producing designs that influenced each other and travel across the globe.
 
 I liked the idea that Miller & Richards work must have crossed the sea at some point and arrived in NYC. My family on my mother’s side did the same, immigrating from Scotland to Ellis Island at a similar point in time. My grandfather Glenn Morrison Chronister, was actually named after a place in Scotland: Glenmoriston. This is a river glen in the Scottish Highlands that feeds Loch Ness.
 
