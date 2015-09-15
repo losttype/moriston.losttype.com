@@ -1,0 +1,92 @@
+.story {
+  font-size: $font-size-small;
+  line-height: 1.525;
+  padding: 0 ($gutter / 2);
+  @media (min-width: $media-wide) {
+    // font-size: 1.25rem;
+    font-size: inherit;
+    line-height: $base-line-height;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  // This is a (kind of dumb) way
+  // to avoid needing markup between
+  // figures and content in the
+  // story section, so it is easier
+  // for Riley to edit.
+  p, ul, ol, blockquote,
+  h1, h2, h3, h4, h5, h6, header,
+  iframe {
+    max-width: 35rem;
+    margin-left: auto;
+    margin-right: auto;
+    @media (min-width: $media-wide) {
+      max-width: $max-width;
+    }
+  }
+}
+
+.story-header {
+  color: $red;
+  line-height: $base-line-height;
+  margin-top: 2em * $base-line-height;
+  margin-bottom: 2em * $base-line-height;
+}
+
+.story-subtitle,
+.story-subtitle.simpleTester {
+  color: #FFF;
+  background-color: $blue;
+  padding: $gutter / 2;
+  mix-blend-mode: multiply;
+  width: 66%;
+  font-size: 1em;
+  position: relative;
+  transform: translate(-1 * ($gutter / 2), -84%);
+  margin-bottom: -2em * $base-line-height;
+  @media (min-width: $media-small) {
+    transform: translate(-1 * ($gutter / 2), -152%);
+  }
+  @media (min-width: $media-mid) {
+    transform: translate(-10%, -109%);
+    padding: $gutter / 2;
+    font-size: 1.1em;
+    width: 50%;
+  }
+  @media (min-width: $media-wide) {
+    transform: translate(-13%, -75%);
+    width: 50%;
+    font-size: 1.25em;
+  }
+}
+
+.story-intro {
+  color: $gray;
+  text-align: center;
+  display: block;
+  line-height: 1;
+}
+
+.story > p:first-of-type,
+.story-lead {
+  font-size: 1.25rem;
+  @media (min-width: $media-mid) {
+    font-size: 1.5rem;
+  }
+  @media (min-width: $media-wide) {
+    font-size: 1.75rem;
+  }
+}
+
+.story-banner {
+  max-width: 100%;
+}
+
+// container breakout?
+
+.story-alphabet {
+  font-size: 3em;
+  text-align: center;
+  color: $red-light;
+  word-break: break-all;
+}
