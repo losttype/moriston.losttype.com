@@ -2,7 +2,7 @@ The spark for Moriston came from an unexpected source during my first visit to N
 
 The design of the bicycle itself was gorgeous, and there was something special about the characterful _R_ monogram on the bike frame. Yet, it was the logotype that really caught my eye.
 
-Set in ultra-bold italic high contrast sans caps, its letterforms were familiar, struck me as an under-explored genre in type.
+Set in ultra-bold, italic, high contrast sans-serif caps, its letterforms were familiar, but struck me as an under-explored genre in type.
 
 It occurred to me that if you stripped away the idiosyncrasies, these letterforms were more or less gothic sans caps. Although there are many ways of looking at what these forms could be with less contrast, I saw them as similar to the Benton Gothics.
 
