@@ -130,8 +130,6 @@
             minFontSize = parseInt(minFontSizeAttr, 10)
           }
 
-          console.log('hi', minFontSize, maxFontSize)
-
           addClass(self, 'bigIdeasText');
 
           if(!id) {
