@@ -196,4 +196,11 @@ hr {
   border: 1px solid $blue-lighter;
   padding: 2em;
   display: block;
+
+.riso {
+  max-width: $max-width * 3;
+  @media (min-width: $media-mid) {
+    margin-left: $gutter;
+    margin-right: $gutter;
+  }
 }
