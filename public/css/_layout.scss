@@ -3,7 +3,12 @@
   margin-left: auto;
   margin-right: auto;
   padding: 0;
-  // overflow-x: hidden; // Don’t actually do this…
+}
+
+@media (min-width: $media-wide) {
+  .container--breakout {
+    max-width: $max-width * 1.5;
+  }
 }
 
 .grid {
