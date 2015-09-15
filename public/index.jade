@@ -26,15 +26,12 @@ html(lang="en-us")
       .container
         header.story-header
           span.story-intro.u-fontWeight--400 Introducing
-          div(contenteditable spellcheck="false").simpleTester.js-scaleText
+          div(contenteditable spellcheck="false").is-editable.simpleTester.js-scaleText
             h1.story-headline.u-fontWeight--900.u-textTransform--uppercase Moriston
-          div(contenteditable spellcheck="false").simpleTester.js-scaleText.story-subtitle
-            span.bigIdeasText-exempt.u-fontWeight--400 A sans-serif typeface with unusually high contrast—<span class="u-fontWeight--600">and enthusiasm!</span>
+            span.u-fontWeight--400 A sans-serif typeface with
           span.story-intro.u-fontWeight--400 by Riley Cran
 
-        p.story-lead Adding contrast to a conversation makes your voice stand out. Moriston is a sans-serif grotesque available in 6 reliable weights, with support for over 200 languages and a variety of additional number styles. 
-
-        p Designed by Riley Cran, and available from your friends at the Lost Type Co-op.
+        p Adding contrast to a conversation makes your voice stand out. Moriston is a sans-serif grotesque available in 6 reliable weights, with support for over 200 languages and a variety of additional number styles. Designed by Riley Cran, and available from your friends at the Lost Type Co-op.
         
         a.button.button--large(href="http://losttype.com/font/?name=moriston") Buy it right now!
 
@@ -88,6 +85,18 @@ html(lang="en-us")
       .grid__cell.square
         .square__content.square__content--centered.u-fontWeight--900 %
         .square__content.square__content--centered.u-fontWeight--900 C
+        a(href="http://losttype.com/font/?name=moriston").promo
+          .grid.grid--gutters
+            .grid__cell
+              img(src="/media/moriston-riso-photo-1.jpg")
+            .grid__cell
+              //- h2 Get Moriston
+              p Pay-What-You-Want for a Personal Use License. Purchase a Commercial Use License for $75 and receive a kickass risograph print at no extra charge!
+              .button.button--large Buy it right now!
+
+    .section
+      .container.container--breakout
+        != partial("_includes/moriston-riso-3x.xml.ejs")
     //- Will be knockouted out at night
 
     .section.section--crop

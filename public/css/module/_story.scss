@@ -27,37 +27,24 @@
 }
 
 .story-header {
-  color: $red;
   line-height: $base-line-height;
   padding-top: 2em * $base-line-height;
   padding-bottom: 2em * $base-line-height;
   border-top: 1em solid $red;
 }
 
+.story-headline {
+  color: $red;
+}
+
 .story-subtitle,
 .story-subtitle.simpleTester {
-  color: #FFF;
-  background-color: $blue;
-  padding: $gutter / 2;
-  mix-blend-mode: multiply;
-  width: 66%;
+  color: $black;
+  width: 100%;
   font-size: 1em;
-  position: relative;
-  transform: translate(-1 * ($gutter / 2), -84%);
-  margin-bottom: -2em * $base-line-height;
-  @media (min-width: $media-small) {
-    transform: translate(-1 * ($gutter / 2), -152%);
-  }
   @media (min-width: $media-mid) {
-    transform: translate(-10%, -109%);
     padding: $gutter / 2;
-    font-size: 1.1em;
-    width: 50%;
-  }
-  @media (min-width: $media-wide) {
-    transform: translate(-13%, -75%);
-    width: 50%;
-    font-size: 1.25em;
+    font-size: 1.5em;
   }
 }
 

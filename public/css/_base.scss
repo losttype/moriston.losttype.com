@@ -188,3 +188,11 @@ hr {
     margin-bottom: $base-line-height * 4em;
   }
 }
+
+
+.promo {
+  margin-top: 3em * $base-line-height;
+  border: 1px solid $blue-lighter;
+  padding: 2em;
+  display: block;
+}
