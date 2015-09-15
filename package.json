@@ -40,6 +40,6 @@
     "build": "harp compile",
     "start": "harp server",
     "predeploy": "npm run build",
-    "deploy": "surge ./www"
+    "deploy": "surge ./www $npm_package_homepage"
   }
 }
