@@ -11,9 +11,26 @@
   margin: 0 $gutter;
 }
 
+/* With gutters */
+.grid--gutters {
+  margin: (-1 * ($gutter/2)) 0 0 (-1 * ($gutter/2));
+  & > .grid__cell {
+    padding: ($gutter/2) 0 0 ($gutter/2);
+  }
+  @media (min-width: $media-mid) {
+    margin: (-1 * $gutter) 0 0 (-1 * $gutter);
+    & > .grid__cell {
+      padding: $gutter 0 0 $gutter;
+    }
+  }
+}
+
 .grid__cell {
   flex: 1;
   // height: 5em;
+  img {
+    max-width: 100%;
+  }
 }
 
 .grid--intro,
