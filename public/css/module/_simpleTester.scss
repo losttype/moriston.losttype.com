@@ -17,7 +17,7 @@
   margin-bottom: 1em;
   overflow: visible;
 
-  transition: opacity 0.25s ease;
+  transition: opacity 0.1s ease-in;
   opacity: 1;
   &:hover {
     opacity: 0.8;
