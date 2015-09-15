@@ -19,7 +19,7 @@
     display: block;
     text-align: center;
     position: absolute;
-    transform: translate(-25%, 1%) rotate(-3deg);
+    transform: translate(-25%, 9%) rotate(-3deg);
     cursor: text;
     left: auto;
     right: auto;
@@ -28,9 +28,10 @@
       font-size: 1rem;
     }
   }
-  &:hover,
-  &:active {
-    &:before {
-    }
-  }
+  // &:hover,
+  // &:active {
+  //   &:before {
+  //     mix-blend-mode: none;
+  //   }
+  // }
 }
