@@ -32,3 +32,21 @@
 .u-textTransform--lowercase {
   text-transform: lowercase;
 }
+
+@media (min-width: $media-mid) {
+  .u-columns {
+    columns: 2 ($max-width / 3);
+    column-gap: $gutter / 2;
+    column-fill: balance;
+    @media (min-width: $media-wide) {
+      columns: 3 ($max-width / 4);
+      column-gap: $gutter;
+    }
+  }
+}
+
+.u-textAlign-justify {
+  text-align: justify;
+  hyphens: auto;
+  // Add hyphenation stuff
+}
