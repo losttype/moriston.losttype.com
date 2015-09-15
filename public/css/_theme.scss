@@ -1,0 +1,42 @@
+// Theme
+
+.knockout {
+  a,
+  a:visited {
+    color: rgba($black, 0.5);
+    border-color: rgba($black, 0.25);
+  }
+  a:hover,
+  a:active {
+    border-color: rgba($black, 0.5);
+  }
+}
+
+.knockout--blue {
+  background-color: $blue;
+  color: #FFF;
+}
+
+.knockout--darkBlue {
+  background-color: $blue-dark;
+  color: #FFF;
+}
+
+.knockout--redDark {
+  color: $black;
+  background-color: $red-dark;
+}
+
+.knockout--redDarker {
+  color: $black;
+  background-color: $red-darker;
+}
+
+.knockout--redDarkest {
+  color: $black;
+  background-color: $red-darker;
+}
+
+.knockout--purple {
+  background-color: $purple;
+}
