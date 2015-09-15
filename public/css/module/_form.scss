@@ -21,9 +21,9 @@ textarea {
   transition: border-color;
   background-color: white;
   border: 0;
-  line-height: parseInt(modular-scale(3));
-  padding-left: modular-scale(-3);
-  padding-right: modular-scale(-3);
+  line-height: $base-line-height;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
   border-radius: $base-border-radius;
   font-size: $base-font-size;
   margin-bottom: $base-line-height / 2;
@@ -59,4 +59,21 @@ input[type="file"] {
 select {
   width: auto;
   margin-bottom: $base-line-height;
+}
+
+// Newsletter
+//
+// Markup: ../../../_includes/newsletter.ejs
+//
+// Styleguide: module.newsletter
+.newsletter { // Maybe this should be a frame?
+  input[type="email"] {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-top: 0.4em;
+    padding-bottom: 0.5em;
+  }
+  .button {
+    transform: translateY(-1 * $base-border-radius);
+  }
 }

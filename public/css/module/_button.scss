@@ -64,36 +64,39 @@ a.button--large {
 //
 // Styleguide: module.button-secondary
 .button-secondary {
-  display: block;
-  width: auto;
   text-align: center;
-  font-weight: inherit;
-  font-family: $base-font-family;
-  margin-top: 1em;
-  padding: 1em;
-
-  & + .button-secondary {
-    display: block;
-  }
-  .button + & {
-    font-size: $font-size-small;
-    margin-bottom: $base-line-height * 1em;
-  }
-  // This isn’t very reusable
-  // Might want to get rid of it anyway, button
-  // should toggle the form visibility there
-  & + .form {
-    margin-top: $base-line-height * 1em;
-  }
-  &.button--primary {
-    color: $red;
-  }
-  @media (min-width: $media-mid) {
-    display: inline-block;
-    text-align: left;
-    input + & {
-      // Fix for weird positioning after inputs
-      transform: translateY($base-line-height * 0.5em);
-    }
-  }
+  display: block;
+  margin: 1em * $base-line-height auto 0 auto;
+  border: none;
+  // width: auto;
+  // text-align: center;
+  // font-weight: inherit;
+  // font-family: $base-font-family;
+  // margin-top: 1em;
+  // padding: 1em;
+  //
+  // & + .button-secondary {
+  //   display: block;
+  // }
+  // .button + & {
+  //   font-size: $font-size-small;
+  //   margin-bottom: $base-line-height * 1em;
+  // }
+  // // This isn’t very reusable
+  // // Might want to get rid of it anyway, button
+  // // should toggle the form visibility there
+  // & + .form {
+  //   margin-top: $base-line-height * 1em;
+  // }
+  // &.button--primary {
+  //   color: $red;
+  // }
+  // @media (min-width: $media-mid) {
+  //   display: inline-block;
+  //   text-align: left;
+  //   input + & {
+  //     // Fix for weird positioning after inputs
+  //     transform: translateY($base-line-height * 0.5em);
+  //   }
+  // }
 }

@@ -2,7 +2,8 @@
 
 .knockout {
   a,
-  a:visited {
+  a:visited,
+  .u-aFaux {
     color: rgba($black, 0.5);
     border-color: rgba($black, 0.25);
   }

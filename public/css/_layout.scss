@@ -4,7 +4,7 @@
   margin-right: auto;
   padding-left: $gutter / 2;
   padding-right: $gutter / 2;
-  @media (min-width: $media-mid) {
+  @media (min-width: $media-wide) {
     padding-left: 0;
     padding-right: 0;
   }

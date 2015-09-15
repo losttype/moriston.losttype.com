@@ -153,7 +153,8 @@ figcaption {
 //
 // No styleguide reference.
 a,
-a:visited {
+a:visited,
+.u-aFaux {
   color: $blue;
   text-decoration: none;
   border-bottom: 0.0625rem solid $blue-lighter;
