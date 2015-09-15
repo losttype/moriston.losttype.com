@@ -1,6 +1,6 @@
 require('fontfaceobserver')
 var Editable = require('contenteditable')
-var record = require('./record.es')
+// var record = require('./record.es')
 var clock = require('./clock.es')
 var hasClass = require('./hasClass.es')
 var contentEditable = document.querySelectorAll('[contenteditable]')
@@ -65,5 +65,5 @@ observer
     console.log('Moriston is not available')
   })
 
-record()
+// record()
 clock()
