@@ -149,6 +149,10 @@
   }
 }
 
+.section--crop {
+  overflow-x: hidden;
+}
+
 .section--short {
   padding-top: $base-line-height * 1em;
   padding-bottom: $base-line-height * 1em;
