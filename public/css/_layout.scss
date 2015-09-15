@@ -35,6 +35,10 @@
   }
 }
 
+.grid--center {
+  align-items: center;
+}
+
 .grid__cell {
   flex: 1;
   // height: 5em;
