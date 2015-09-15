@@ -9,7 +9,7 @@ It occurred to me that if you stripped away the idiosyncrasies, these letterform
 <figure>
 ![](/media/moriston-photo-rollfast.jpg)
 <figcaption>
-  <p>Image that helps clarify what it means to have something similar to the Benton Gothics.</p>
+  <p>The rollfast bicycle logotype, as I saw it in New York. Check out that round top A!</p>
 </figcaption>
 </figure>
 
@@ -20,16 +20,15 @@ What would happen if an entire family was built this way? An early 20<sup>th</su
 ![](/media/moriston-riso-photo-1.jpg)
 </div>
 <figcaption class="mwl-25">
-  <p>Here, I worked on the extremes of a typeface: the boldest weight and the lightest weight are original master. This allows the in-between weights to be interpolated.</p>
-  <p>Interpolation is commonly used by type designers both as a sketching technique, and for generating the final weights of a typeface.</p>
-  <footer>Riley Cran, <cite>Moriston interpolation tests</cite>, 2015.</footer></figcaption>
+  <p>This 2 color risograph poster ships free with every commercial license sold in the <abbr>USA</abbr>. <a href="http://losttype.com/font/?name=moriston">Purchase Moriston</a></p>
 </figure>
 
 ## Glenmoriston
 
-Miller & Richards Grotesque #7 proved influential while working through this idea. Produced around the turn of the century, this was when the sans-serif came into its own. With ideas from Scottish type founders like Miller & Richards, American type founders like Morris Fuller Benton at ATF, and other foundries producing designs that influenced each other and travel across the globe.
 
-I liked the idea that Miller & Richards work must have crossed the sea at some point and arrived in NYC. My family on my mother’s side did the same, immigrating from Scotland to Ellis Island at a similar point in time. My grandfather Glenn Morrison Chronister, was actually named after a place in Scotland: Glenmoriston. This is a river glen in the Scottish Highlands that feeds Loch Ness.
+One influence was Miller & Richard's Grotesque #7, produced around the turn of the century. It was around this time that the sans-serif really came into its own, with type designers like Miller & Richards in Scotland, Morris Fuller Benton in the <abbr>US</abbr>, and others influencing each other and sharing ideas across the globe.
+
+I liked the idea that Miller & Richards work must have crossed the sea at some point and arrived in NYC. My family on my mother’s side did the same, immigrating from Scotland to Ellis Island at a similar point in time. My grandfather Glenn Morison Chronister, was actually named after a place in Scotland: Glenmoriston. This is a river glen in the Scottish Highlands that feeds Loch Ness.
 
 I never got a chance to meet Glenn, but I grew up in a family that always told me I was the son he never had, and that he would be interested in the work I was doing. Seizing the opportunity to honor his name, and the birth country of my family on both sides, the typeface is named Moriston.
 
@@ -46,5 +45,5 @@ Moriston’s contrast and fuller, rounder curves give it a certain sparkle both 
 ![](/media/moriston-riso-photo-2.jpg)
 </div>
 <figcaption class="mwl-50">
-  <p>When we arrived at Lubalin Center, Sasha had already pulled a few dozen pieces for us. Pictured here, Sasha shows off an original Alvin Lustig catalog design, and leafs from Massimo Vignelli’s [Unimark New York Subway Style guide](http://thestandardsmanual.com).</p></figcaption>
+  <p>This 2 color risograph poster ships free with every commercial license sold in the <abbr>USA</abbr>. <a href="http://losttype.com/font/?name=moriston">Purchase Moriston</a></p></figcaption>
 </figure>
