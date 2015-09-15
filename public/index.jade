@@ -94,9 +94,11 @@ html(lang="en-us")
         .square__content.square__content--centered.u-fontWeight--900 %
         .square__content.square__content--centered.u-fontWeight--900 C
     //- Will be knockouted out at night
-    .knockout--crop
-      .container#clock
-        include _includes/clock
+
+    .section
+      .container#shadow
+        .simpleTester.js-scaleText.is-editable.shadow.u-fontWeight--900.u-textTransform--uppercase(contenteditable spellcheck="false" bigIdeasText-maxfontsize="1000")
+          span Moriston<br/>Moriston<br/>Moriston
 
     .knockout
       .container
@@ -107,15 +109,17 @@ html(lang="en-us")
           span.u-fontWeight--600 LOCAL LOCH
           span.u-fontWeight--700 Very good Jazz albums
           span.u-fontWeight--900 New York
-          
-    .knockout.knockout--darkBlue#sugar
-      .container#sugar
-        include _includes/sugar
 
-    .section
-      .container#shadow
-        .simpleTester.js-scaleText.is-editable.shadow(contenteditable spellcheck="false" bigIdeasText-maxfontsize="1000")
-          span.u-fontWeight--900.u-textTransform--uppercase Moriston<br/>Moriston<br/>Moriston
+    .section.section--crop
+      .container#clock
+        include _includes/clock
+
+
+    //-
+      .knockout.knockout--darkBlue#sugar
+        .container#sugar
+          include _includes/sugar
+
 
     
     .knockout.knockout--purple.knockout--crop
@@ -125,6 +129,30 @@ html(lang="en-us")
     #story.section
       //- include _includes/story.md
       article.story!= partial("_includes/story")
+        footer.container
+          img(src="http://placehold.it/800x600")
+          h2 Riley Cran
+          | Riley Cran is a type designer and lettering artist based in the Pacific Northwest. He is the Operator and Co-Founder of The Lost Type Co-op, a collaborative digital type foundry.
+
+          img(src="http://placehold.it/800x600")
+          h2 Glenn Moriston Chronister
+          | Moriston is dedicated to the memory of Glenn Moriston Chronister.
+
+    footer
+      section.section.knockout.knockout--redDark
+        .container
+          != partial("_includes/newsletter")
+          h2 Special thanks to…
+          p My Friends and Family: My parents, Marg and Dave. My girlfriend Heather Neale, she’s got my back. And to Dan Gneiding, Danelle Cheney, Kenneth Ormandy, Cody Jones, Alanna Munro, Andrea Husky, and Rick Murphy, for patiently listening to me talk about this typeface for hours on end.
+
+          p Those who built the tools that make type design possible: Frederik Berlaen (Robofont), Tal Leming (Prepolator and Metrics Machine), Erik Van Blokland (Superpolator), the team behind Glyphs, and Nina Stoessinger (Word-O-Mat).
+
+          p Those who provided feedback throughout the design process, I can’t thank you enough for your time and valuable insight: Ross Milne, Christian Schwartz, Shiva Nallaperumal, Berton Hasebe, Cyrus Highsmith, Erik Van Blokland, and Dave Foster.
+
+      section.section.knockout.knockout--redDarker
+        .container
+          | Site by <a href="http://kennethormandy.com">Kenneth Ormandy</a>.<br/>
+          | Get more fonts by <a href="http://rileycran.com">Riley Cran</a> and friends from <a href="http://losttype.com">the Lost Type Co-op</a>.
 
     script(src="/js/vendor/big-ideas-text.js")      
     //- script(src="https://rawgit.com/kennethormandy/big-ideas-text/master/dist/big-ideas-text.js")
