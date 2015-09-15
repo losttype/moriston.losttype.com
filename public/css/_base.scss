@@ -75,25 +75,6 @@ h1 {
   @extend abbr;
 }
 
-.knockout {
-  background-color: $blue;
-  color: #FFF;
-  padding-top: 3em;
-  padding-bottom: 3em;
-}
-
-.knockout--darkBlue {
-  background-color: $blue-dark;
-}
-
-.knockout--purple {
-  background-color: $purple;
-}
-
-.knockout--crop {
-  overflow-x: hidden;
-}
-
 // Since we don’t have italics yet!
 em, i, cite {
   font-style: normal;
