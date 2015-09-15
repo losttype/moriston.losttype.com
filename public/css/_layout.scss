@@ -2,7 +2,12 @@
   max-width: $max-width;
   margin-left: auto;
   margin-right: auto;
-  padding: 0;
+  padding-left: $gutter / 2;
+  padding-right: $gutter / 2;
+  @media (min-width: $media-mid) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 @media (min-width: $media-wide) {
