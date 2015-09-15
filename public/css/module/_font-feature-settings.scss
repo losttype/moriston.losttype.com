@@ -1,0 +1,48 @@
+/*! Based on Normalize-OpenType.css v0.2.4
+    MIT License
+    kennethormandy.com/journal/normalize-opentype-css
+*/
+
+html,
+body,
+table {
+  font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 0, "lnum" 1;
+}
+
+.story {
+  font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0;
+}
+
+.u-fontFeatureSettings-lnum {
+  font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 0, "lnum" 1;
+}
+
+abbr,
+.caps {
+  text-transform: uppercase;
+  font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 0, "lnum" 1, "smcp" 1, "c2sc" 1;}
+
+pre,
+kbd,
+samp,
+code {
+  font-feature-settings: "kern" 0, "liga" 0, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1;
+}
+
+sup {
+  font-feature-settings: "kern" 1, "liga" 1, "sups" 1;
+}
+
+sub {
+  font-feature-settings: "kern" 1, "liga" 1, "subs" 1;
+}
+
+input[type="text"],
+input[type="email"] {
+  font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 0, "lnum" 1;
+}
+
+tbody,
+caption {
+  font-feature-settings: "kern" 1, "liga" 1, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1;
+}
