@@ -8,7 +8,10 @@ var elScale = document.querySelectorAll('.js-scaleText')
 var elDropcap = document.querySelectorAll('.js-dropcap')
 
 var scaleText = function (elScale) {
-  bigIdeasText(elScale, { maxfontsize: 250, minfontsize: 30 })
+  bigIdeasText(elScale, {
+    maxfontsize: 300,
+    minfontsize: 30
+  })
 }
 
 var editableEvents = function (el) {
