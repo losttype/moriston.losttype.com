@@ -191,11 +191,39 @@ hr {
 }
 
 
-.promo {
+.promo,
+a.promo {
   margin-top: 3em * $base-line-height;
-  border: 1px solid $blue-lighter;
-  padding: 2em;
+  // border: 1px solid $blue-lighter;
   display: block;
+  border-bottom: 0;
+  padding: $base-line-height * 1em ($gutter / 2) ($base-line-height * 1em * 1.5) ($gutter / 2);
+  border-radius: $base-border-radius;
+  color: $gray;
+  background: $gray-lighter;
+  img {
+    border-radius: 2px;
+    margin-bottom: $gutter;
+  }
+  .button {
+    // display: flex;
+    max-width: 100%;
+    width: auto;
+  }
+  &:hover,
+  &:active,
+  &:visited,
+  &:focus {
+    color: $gray;
+  }
+  @media (min-width: $media-mid) {
+    img {
+      width: 90%;
+      width: calc(100% - $gutter);
+      margin: 0;
+    }
+  }
+}
 
 .riso {
   max-width: $max-width * 3;
