@@ -43,69 +43,48 @@
   flex: 1;
   // height: 5em;
   img {
+    display: block;
     max-width: 100%;
   }
 }
 
-.grid--intro,
-.grid--intro .grid__cell {
-  height: 0;
-  overflow: hidden;
-  border-bottom: 1em solid $red;
+.svg-blue {
+  opacity: 0.5;
+  fill: green;
 }
 
-// Square
-//
-// Derived from [this pen](http://codepen.io/thetallweeks/pen/tAdmL).
-//
-// No styleguide reference.
-.square {
-  padding-bottom: 20%; // This was 100% in the original, don’t know why it’s different
-  position: relative;
-  user-select: none;
+.svg-red {
+  mix-blend-mode: multiply;
+  .svg-square {
+    opacity: 0.9;
+  }
+}
+
+.svg-square {
   speak: none;
   cursor: default;
-  //
-  // // Temp
-  overflow: hidden !important;
-  z-index: 0;
-}
-
-.square__content {
-  // margin-top: -33%;
-  flex: 1;
-  z-index: 1;
-  opacity: 0.5;
-
-  display: flex;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  transition: 0.25s color ease-in-out, 1s background-color ease-in-out, 0.5s transform ease-in-out;
-
-  &:hover {
-    color: $blue;
-    background-color: $red;
-    // transform: translateY(20px);
-    backface-visibility: visible;
-    &:first-child {
-      color: $red;
-      background-color: $blue;
-      transform: none;
+  user-select: none;
+  transition: 0.25s fill ease-in-out;
+  rect {
+    transition: fill 1.25s ease-in;
+  }
+  text {
+    transition: fill 0.25s ease-in;
+  }
+  &:hover,
+  .is-inverted {
+    opacity: 1;
+    rect {
+      fill: $red-dark;
+    }
+    text {
+      fill: $purple;
     }
   }
+}
 
-  font-size: 20em; // Temp
 
-  &:nth-of-type(2n) {
-    font-size: 40em;
-  }
-  &:nth-of-type(3n) {
-    font-size: 10em;
-  }
-
+.square__content {
   background-color: $blue;
   color: white;
   opacity: 1.0;
