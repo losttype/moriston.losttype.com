@@ -17,10 +17,10 @@ What would happen if an entire family was built this way? An early 20<sup>th</su
 
 <figure>
 <div class="mwl-75">
-![](/media/moriston-riso-photo-1.jpg)
+![](/media/moriston-interpolation-test.png)
 </div>
 <figcaption class="mwl-25">
-  <p>This 2 color risograph poster ships free with every commercial license sold in the <abbr>USA</abbr>. <a href="http://losttype.com/font/?name=moriston">Purchase Moriston</a></p>
+  <p>Working on the extremes of Moriston using interpolation. Interpolation is commonly used by type designers both as a sketching technique, and for generating the final or near-final weights of a type family.</p>
 </figure>
 
 ## Glenmoriston

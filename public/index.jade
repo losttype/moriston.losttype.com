@@ -152,14 +152,16 @@ html(lang="en-us")
           div(contenteditable spellcheck="false").simpleTester.simpleTester--target.js-scaleText
             span I want to hear about future Lost Type releases, email me then!
           != partial("_includes/newsletter")
-          h2 Special thanks to…
-          p My Friends and Family: My parents, Marg and Dave. My girlfriend Heather Neale, she’s got my back. And to Dan Gneiding, Danelle Cheney, Kenneth Ormandy, Cody Jones, Alanna Munro, Andrea Husky, and Rick Murphy, for patiently listening to me talk about this typeface for hours on end.
 
-          p Those who provided feedback throughout the design process, I can’t thank you enough for your time and valuable insight: Ross Milne, Christian Schwartz, Shiva Nallaperumal, Berton Hasebe, Cyrus Highsmith, Erik Van Blokland, and Dave Foster.
+          .section.section--short
+            h2 Special thanks to…
+            p My Friends and Family: My parents, Marg and Dave. My girlfriend Heather Neale, she’s got my back. And to Dan Gneiding, Danelle Cheney, Kenneth Ormandy, Cody Jones, Alanna Munro, Andrea Husky, and Rick Murphy, for patiently listening to me talk about this typeface for hours on end.
 
-          p For mastering: <span class="caps">PSY/OPS</span>, who always do excellent work.
+            p Those who provided feedback throughout the design process, I can’t thank you enough for your time and valuable insight: Ross Milne, Christian Schwartz, Shiva Nallaperumal, Berton Hasebe, Cyrus Highsmith, Erik Van Blokland, and Dave Foster.
 
-          p Those who built the tools that make type design possible: Frederik Berlaen (Robofont), Tal Leming (Prepolator and Metrics Machine), Erik Van Blokland (Superpolator), the team behind Glyphs, and Nina Stoessinger (Word-O-Mat).
+            p For mastering: <span class="caps">PSY/OPS</span>, who always do excellent work.
+
+            p Those who built the tools that make type design possible: Frederik Berlaen (Robofont), Tal Leming (Prepolator and Metrics Machine), Erik Van Blokland (Superpolator), the team behind Glyphs, and Nina Stoessinger (Word-O-Mat).
 
       section.section.section--short.knockout.knockout--redDarker
         .container
@@ -167,8 +169,15 @@ html(lang="en-us")
           | Get more fonts by <a href="http://rileycran.com">Riley Cran</a> and friends from <a href="http://losttype.com">The Lost Type Co-op</a>.
 
     script(src="/js/vendor/big-ideas-text.js")
-    //- script(src="https://rawgit.com/kennethormandy/big-ideas-text/master/dist/big-ideas-text.js")
-    script(src="https://rawgit.com/niklasvh/html2canvas/0.5.0-alpha2/dist/html2canvas.min.js")
     script(src="/js/index.js")
-    script(src="https://rawgit.com/LeaVerou/prefixfree/gh-pages/prefixfree.min.js")
-    script(src="https://rawgit.com/LeaVerou/conic-gradient/gh-pages/conic-gradient.js")
+    script(src="https://cdn.rawgit.com/niklasvh/html2canvas/0.5.0-alpha2/dist/html2canvas.min.js" async)
+    script(src="https://cdn.rawgit.com/LeaVerou/prefixfree/gh-pages/prefixfree.min.js")
+    script(src="https://cdn.rawgit.com/LeaVerou/conic-gradient/gh-pages/conic-gradient.js")
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-23393770-9', 'auto');
+      ga('send', 'pageview');
