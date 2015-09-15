@@ -23,7 +23,7 @@ $riley: #FE5F2B;
 $riley-light: #FBEDDF;
 $riley-dark: #D14E21;
 
-$red: #EE4D4A;
+$red: #ED4E4F;
 $red-dark: #EB212E;
 $red-darker: mix($black, #EB212E, 50%);
 $red-darkest: mix($black, #EB212E, 75%);
@@ -34,7 +34,7 @@ $blue-dark: saturate(mix($blue, black, 75%), 50%);
 $blue-light: lighten($blue, 10%);
 $blue-lighter: lighten(desaturate($blue, 50%), 50%);
 
-$purple: #654352;
+$purple: #5D4153;
 $purple-dark: darken($purple, 10%);
 $purple-light: lighten($purple, 10%);
 $purple-lighter: lighten($purple, 20%);
