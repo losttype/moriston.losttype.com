@@ -129,6 +129,15 @@
   }
 }
 
+.section--short {
+  padding-top: $base-line-height * 1em;
+  padding-bottom: $base-line-height * 1em;
+  @media (min-height: $media-mid) {
+    padding-top: $base-line-height * 2em;
+    padding-bottom: $base-line-height * 2em;
+  }
+}
+
 // Section captions
 .section-caption {
   margin-bottom: $base-line-height * 1em;
