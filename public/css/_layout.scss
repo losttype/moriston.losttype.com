@@ -8,13 +8,11 @@
 
 .grid {
   display: flex;
-  // max-width: 75rem;
   margin: 0 $gutter;
 }
 
 .grid__cell {
   flex: 1;
-  height: 5em;
   // height: 5em;
 }
 
