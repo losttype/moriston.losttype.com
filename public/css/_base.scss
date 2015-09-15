@@ -180,12 +180,11 @@ hr {
   height: 0;
   border: 0;
   border-bottom: 0.0625rem solid $blue-lighter;
-
+  max-width: $max-width;
   margin-top: $base-line-height * 2em;
   margin-bottom: $base-line-height * 2em;
   @media (min-height: $media-mid) {
     margin-top: $base-line-height * 4em;
     margin-bottom: $base-line-height * 4em;
   }
-  width: $max-width;
 }
