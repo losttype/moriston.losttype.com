@@ -60,7 +60,6 @@ p {
 }
 
 h1 {
-  color: $red;
   font-weight: 900;
   font-size: 3em;
   margin: 0.5rem * $base-line-height 0;
@@ -117,6 +116,7 @@ em, i, cite {
 .story-header {
   color: $red;
   line-height: $base-line-height;
+  margin-top: 2em * $base-line-height;
   margin-bottom: 2em * $base-line-height;
 }
 

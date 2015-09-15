@@ -128,7 +128,9 @@ html(lang="en-us")
 
     #story.section
       //- include _includes/story.md
-      article.story!= partial("_includes/story")
+      article.story
+        h1 Read Moriston
+        != partial("_includes/story")
         footer.container
           img(src="http://placehold.it/800x600")
           h2 Riley Cran
