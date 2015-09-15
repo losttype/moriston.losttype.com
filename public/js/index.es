@@ -23,6 +23,11 @@ var editableEvents = function (el) {
       scaleText(el)
     })
   }
+  if (hasClass(editable.element, 'is-editable')) {
+    editable.element.onfocus = function (asdf) {
+      editable.element.classList.remove('is-editable')
+    }
+  }
 }
 
 var editableInit = function () {
