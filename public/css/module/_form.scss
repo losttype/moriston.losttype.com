@@ -1,0 +1,62 @@
+// Form
+//
+// Styleguide: module.form
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+textarea {
+  font-family: $font-family-sans;
+  box-sizing: border-box;
+  transition: border-color;
+  background-color: white;
+  border: 0;
+  line-height: parseInt(modular-scale(3));
+  padding-left: modular-scale(-3);
+  padding-right: modular-scale(-3);
+  border-radius: $base-border-radius;
+  font-size: $base-font-size;
+  margin-bottom: $base-line-height / 2;
+  padding: ($base-line-height / 3) ($base-line-height / 3);
+  min-height: $base-line-height * 1.5em;
+  // border: 1px solid $gray-lighter;
+  resize: none;
+  width: 100%;
+
+  &:input-placeholder {
+    color: $gray-dark;
+  }
+  &:hover,
+  &:focus {
+    border-color: $gray;
+    outline: none;
+  }
+}
+
+input[type="search"] {
+  appearance: none;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  display: inline;
+  margin-right: $base-line-height / 4;
+}
+
+input[type="file"] {
+  width: 100%;
+}
+
+select {
+  width: auto;
+  margin-bottom: $base-line-height;
+}
