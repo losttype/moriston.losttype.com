@@ -58,11 +58,11 @@ var observer = new FontFaceObserver('Moriston')
 observer
   .check()
   .then(function () {
-    console.log('Moriston is available!')
+    // console.log('Moriston is available!')
     scaleText(elScale)
     editableInit()
   }, function () {
-    console.log('Moriston is not available')
+    // console.log('Moriston is not available')
   })
 
 // record()
