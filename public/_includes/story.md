@@ -7,7 +7,7 @@ Set in ultra-bold italic high contrast sans caps, its letterforms were familiar,
 It occurred to me that if you stripped away the idiosyncrasies, these letterforms were more or less gothic sans caps. Although there are many ways of looking at what these forms could be with less contrast, I saw them as similar to the Benton Gothics.
 
 <figure>
-![](http://blog.losttype.com/media/2013/10/12.jpg)
+![](/media/moriston-photo-rollfast.jpg)
 <figcaption>
   <p>Image that helps clarify what it means to have something similar to the Benton Gothics.</p>
 </figcaption>
@@ -17,7 +17,7 @@ What would happen if an entire family was built this way? An early 20<sup>th</su
 
 <figure>
 <div class="mwl-75">
-![](http://kennethormandy.com/media/riley-cran-moriston-interpolation-test.png)
+![](/media/moriston-riso-photo-1.jpg)
 </div>
 <figcaption class="mwl-25">
   <p>Here, I worked on the extremes of a typeface: the boldest weight and the lightest weight are original master. This allows the in-between weights to be interpolated.</p>
@@ -40,10 +40,10 @@ Moriston’s contrast and fuller, rounder curves give it a certain sparkle both 
 
 <figure>
 <div class="mw-50">
-![](/media/lubalin-newyork-1.jpg)
+![](/media/moriston-riso-photo-1.jpg)
 </div>
 <div class="mw-50">
-![](/media/lubalin-newyork-2.jpg)
+![](/media/moriston-riso-photo-2.jpg)
 </div>
 <figcaption class="mwl-50">
   <p>When we arrived at Lubalin Center, Sasha had already pulled a few dozen pieces for us. Pictured here, Sasha shows off an original Alvin Lustig catalog design, and leafs from Massimo Vignelli’s [Unimark New York Subway Style guide](http://thestandardsmanual.com).</p></figcaption>

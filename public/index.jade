@@ -34,7 +34,7 @@ html(lang="en-us")
 
         p.story-lead Adding contrast to a conversation can make your voice stand out. Moriston is a sans-serif grotesque with unusually high contrast, and uncharacteristically high enthusiasm.
         
-        p Available in 6 reliable weights and support for over 200 languages, and a variety of additional number styles, Moriston is a comprehensive type family designed by Riley Cran and available from your friends at the Lost Type Co-op.
+        p Available in 6 reliable weights and support for over 200 languages, and a variety of additional number styles, Moriston is a comprehensive type family designed by Riley Cran and available from your friends at The Lost Type Co-op.
 
         //- .story-alphabet
         //-   | abcdefghijklmnopqrstuvwxyz
@@ -120,9 +120,7 @@ html(lang="en-us")
         .container#sugar
           include _includes/sugar
 
-
-    
-    .knockout.knockout--purple.knockout--crop
+    .section.knockout.knockout--purple.knockout--crop
       .container#record
         include _includes/record
 
@@ -136,16 +134,18 @@ html(lang="en-us")
           //- span.story-intro.u-fontWeight--400.bigIdeasText-exempt.u-fontFeatureSettings-lnum Riley Cran<br/>
 
         != partial("_includes/story")
+        hr
         footer.container
-          .grid
+          .grid.grid--gutters
             .grid__cell
-              img(src="http://placehold.it/800x600")
-              h2 Riley Cran
-              | Riley Cran is a type designer and lettering artist based in the Pacific Northwest. He is the Operator and Co-Founder of The Lost Type Co-op, a collaborative digital type foundry.
+              img(src="/media/profile-riley.jpg")
+              h2 Riley Cran<br/>
+                a.u-fontWeight--400(href="http://twitter.com/rileycran") @rileycran
+              p Riley Cran is a type designer and lettering artist based in the Pacific Northwest. He is the Operator and Co-Founder of <a href="http://losttype.com">The Lost Type Co-op</a>, a collaborative digital type foundry.
             .grid__cell
-              img(src="http://placehold.it/800x600")
+              img(src="/media/profile-glenn.jpg")
               h2 Glenn Moriston Chronister
-              | Moriston is dedicated to the memory of Glenn Moriston Chronister.
+              p Moriston is dedicated to the memory of Glenn Moriston Chronister.
 
     footer
       section.section.knockout.knockout--redDark
@@ -161,7 +161,7 @@ html(lang="en-us")
       section.section.section--short.knockout.knockout--redDarker
         .container
           | Site by <a href="http://kennethormandy.com">Kenneth Ormandy</a>.<br/>
-          | Get more fonts by <a href="http://rileycran.com">Riley Cran</a> and friends from <a href="http://losttype.com">the Lost Type Co-op</a>.
+          | Get more fonts by <a href="http://rileycran.com">Riley Cran</a> and friends from <a href="http://losttype.com">The Lost Type Co-op</a>.
 
     script(src="/js/vendor/big-ideas-text.js")
     //- script(src="https://rawgit.com/kennethormandy/big-ideas-text/master/dist/big-ideas-text.js")
