@@ -34,7 +34,7 @@
   },
   "scripts": {
     "lint": "standard public/js/index.es",
-    "test": "echo \"Error: no test specified…yet! Pull requests on https://github.com/losttype/moriston.losttype.com are greatly appreciated.\" && exit 1",
+    "test": "echo \"Error: no test specified…yet! Pull requests on https://github.com/losttype/moriston.losttype.com are greatly appreciated.\"",
     "posttest": "npm run lint",
     "postinstall": "cp ./node_modules/normalize.css/normalize.css ./node_modules/normalize.css/normalize.scss",
     "build": "harp compile",
