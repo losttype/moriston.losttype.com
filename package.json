@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "fontfaceobserver": "1.5.1",
-    "harp": "0.17.0",
+    "harp": "0.19.0",
     "normalize-opentype.css": "0.2.4",
     "normalize.css": "3.0.3",
     "standard": "4.5.4",
