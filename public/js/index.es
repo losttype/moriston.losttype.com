@@ -5,6 +5,7 @@ var clock = require('./clock.es')
 var hasClass = require('./hasClass.es')
 var contentEditable = document.querySelectorAll('[contenteditable]')
 var elScale = document.querySelectorAll('.js-scaleText')
+var bigIdeasText = require('big-ideas-text')
 
 var scaleText = function (elScale) {
   bigIdeasText(elScale, {

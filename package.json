@@ -13,6 +13,7 @@
   "repository": "git@github.com:losttype/moriston.losttype.com.git",
   "keywords": [],
   "dependencies": {
+    "big-ideas-text": "0.4.0",
     "contenteditable": "0.3.0",
     "dropcap.js": "^1.0.0",
     "html2canvas": "0.5.0-alpha2",
