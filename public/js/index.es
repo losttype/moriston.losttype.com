@@ -40,7 +40,7 @@ var editableInit = function () {
 
 var editablePaste = function (e) {
   if (!('-webkit-user-modify' in document.body.style) && !('user-modify' in document.body.style)) {
-    if(e.type === 'paste') {
+    if (e.type === 'paste') {
       // Derived from http://stackoverflow.com/a/19327995
       var content = ((e.originalEvent || e).clipboardData || window.clipboardData).getData('Text')
       if (typeof e.target.innerText !== 'undefined') {
