@@ -6,7 +6,7 @@ The minisite for Riley Cran’s Moriston, from your friends at Lost Type.
 
 ```
 # Clone the project
-git clone https://github.com/losttype/moriston.losttype.com && cd morison
+git clone https://github.com/losttype/moriston.losttype.com && cd morison.losttype.com
 
 # Install dependencies
 npm install
