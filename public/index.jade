@@ -128,10 +128,17 @@ html(lang="en-us")
     //- script(src="https://cdn.rawgit.com/LeaVerou/prefixfree/gh-pages/prefixfree.min.js")
     //- script(src="https://cdn.rawgit.com/LeaVerou/conic-gradient/gh-pages/conic-gradient.js")
     script.
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      var track = navigator ? !navigator.doNotTrack : false;
 
-      ga('create', 'UA-23393770-9', 'auto');
-      ga('send', 'pageview');
+      // Respect “Do Not Track”
+      if (track) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-23393770-9', 'auto');
+        ga('set', 'anonymizeIp', true); // https://support.google.com/analytics/answer/2905384?hl=en
+        ga('send', 'pageview');
+      } else {
+        console.info('Respecting Do Not Track')
+      }
