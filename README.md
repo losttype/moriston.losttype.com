@@ -12,10 +12,7 @@ git clone https://github.com/losttype/moriston.losttype.com && cd morison.lostty
 npm install
 ```
 
-The web fonts are not included in this repository, but by default the local versions are used. If you run the project in `production` mode instead,
-you can pull the fonts from the [Surge content delivery network](https://surge.sh) and everything should work as expected:
-
-<!-- TODO NODE_ENVIRONMENT="production" -->
+The web fonts are not included in this repository. You’ll need to add them to `public/fonts` manually.
 
 ```
 # Start the project
