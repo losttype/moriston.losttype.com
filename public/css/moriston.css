@@ -5,8 +5,7 @@
   font-weight: 300;
   font-stretch: normal;
   src: url("/fonts/moriston-n3.woff2") format("woff2"),
-       url("/fonts/moriston-n3.woff")  format("woff"),
-       url("/fonts/moriston-n3.ttf")   format("ttf");
+       url("/fonts/moriston-n3.woff")  format("woff");
 }
 
 @font-face {
@@ -14,8 +13,7 @@
   font-weight: 400;
   font-stretch: normal;
   src: url("/fonts/moriston-n4.woff2") format("woff2"),
-       url("/fonts/moriston-n4.woff")  format("woff"),
-       url("/fonts/moriston-n4.ttf")   format("ttf");
+       url("/fonts/moriston-n4.woff")  format("woff");
 }
 
 @font-face {
@@ -23,8 +21,7 @@
   font-weight: 500;
   font-stretch: normal;
   src: url("/fonts/moriston-n5.woff2") format("woff2"),
-       url("/fonts/moriston-n5.woff")  format("woff"),
-       url("/fonts/moriston-n5.ttf")   format("ttf");
+       url("/fonts/moriston-n5.woff")  format("woff");
 }
 
 @font-face {
@@ -32,8 +29,7 @@
   font-weight: 600;
   font-stretch: normal;
   src: url("/fonts/moriston-n6.woff2") format("woff2"),
-       url("/fonts/moriston-n6.woff")  format("woff"),
-       url("/fonts/moriston-n6.ttf")   format("ttf");
+       url("/fonts/moriston-n6.woff")  format("woff");
 }
 
 @font-face {
@@ -41,8 +37,7 @@
   font-weight: 700;
   font-stretch: normal;
   src: url("/fonts/moriston-n7.woff2") format("woff2"),
-       url("/fonts/moriston-n7.woff")  format("woff"),
-       url("/fonts/moriston-n7.ttf")   format("ttf");
+       url("/fonts/moriston-n7.woff")  format("woff");
 }
 
 @font-face {
@@ -51,6 +46,5 @@
   font-style: normal;
   font-stretch: normal;
   src: url("/fonts/moriston-n9.woff2") format("woff2"),
-       url("/fonts/moriston-n9.woff")  format("woff"),
-       url("/fonts/moriston-n9.ttf")   format("ttf");
+       url("/fonts/moriston-n9.woff")  format("woff");
 }
