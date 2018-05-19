@@ -53,17 +53,29 @@ var editablePaste = function (e) {
   }
 }
 
-var observer = new FontFaceObserver('Moriston')
+var observers = [
+  new FontFaceObserver('Moriston', { weight: 300 }).check(),
+  new FontFaceObserver('Moriston', { weight: 400 }).check(),
+  new FontFaceObserver('Moriston', { weight: 500 }).check(),
+  new FontFaceObserver('Moriston', { weight: 600 }).check(),
+  new FontFaceObserver('Moriston', { weight: 700 }).check(),
+  new FontFaceObserver('Moriston', { weight: 900 }).check()
+]
 
-observer
-  .check()
-  .then(function () {
-    // console.log('Moriston is available!')
+if (window.Promise) {
+  Promise.all(observers).then(function () {
     scaleText(elScale)
     editableInit()
-  }, function () {
-    // console.log('Moriston is not available')
+  }, function (err) {
+    console.log('Moriston is not available')
+    console.warn(err)
   })
+} else {
+  window.setTimeout(function () {
+    scaleText(elScale)
+    editableInit()    
+  }, 1000)
+}
 
 // record()
 clock()
