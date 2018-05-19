@@ -38,7 +38,7 @@
     "posttest": "npm run lint",
     "postinstall": "cp ./node_modules/normalize.css/normalize.css ./node_modules/normalize.css/normalize.scss",
     "build": "harp public www",
-    "start": "harp server",
+    "start": "harp public",
     "predeploy": "npm run build",
     "deploy": "surge ./www $npm_package_homepage"
   }
